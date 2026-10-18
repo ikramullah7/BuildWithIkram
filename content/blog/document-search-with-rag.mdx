@@ -1,0 +1,61 @@
+---
+title: "Document search that shows its sources"
+description: "A practical introduction to retrieval-augmented generation, its business purpose and the checks needed before using internal documents."
+date: "2026-10-18"
+updated: "2026-10-18"
+category: "Document intelligence"
+tags: ["AI", "RAG", "Cloud"]
+coverImage: "/images/document-search.svg"
+coverAlt: "Diagram connecting approved documents, retrieved passages and a sourced answer"
+youtubeUrl: ""
+relatedProject: "enterprise-document-search"
+draft: true
+---
+
+This demonstration article is an unpublished design exploration. It does not report results from a deployed document search system.
+
+A straightforward question can take a surprising amount of work when the answer is hidden across policies, notes and shared folders. An internal search assistant could help, provided it respects access permissions and lets people check the original material.
+
+## The business problem
+
+People need an answer they can act on, together with enough context to decide whether it applies. A fluent paragraph without a reliable source can create more work because somebody must verify every claim separately.
+
+Start by identifying a narrow document collection and a set of questions that people actually ask. Establish which documents are current and who is allowed to read each one. Improving ownership and organisation may be more useful than adding AI immediately.
+
+## How retrieval fits in
+
+Retrieval-augmented generation, or RAG, first finds relevant passages and then supplies those passages to a language model as context. The intended result is an answer grounded in the selected material. Retrieval does not guarantee that the answer is correct.
+
+An illustrative workflow looks like this:
+
+```typescript
+type Passage = {
+  text: string;
+  source: string;
+  permitted: boolean;
+};
+
+function approvedContext(passages: Passage[]) {
+  return passages
+    .filter((passage) => passage.permitted)
+    .map(({ text, source }) => ({ text, source }));
+}
+```
+
+This example only demonstrates a data transformation. Production permission checks must happen in the retrieval layer using the reader’s identity; a boolean attached to an untrusted record is not an access control system.
+
+## Check the answer and the source
+
+An evaluation set should include answerable questions, questions with contradictory evidence and questions the documents cannot answer. Review whether the retrieved passages contain the answer, whether the response accurately represents them and whether each citation supports the attached claim.
+
+If the evidence is missing, the system should say so. A useful interface can offer the relevant document excerpts without generating a definitive answer.
+
+## Operational limitations
+
+Document updates, deletion requests and permission changes must propagate through the search index. Old copies of restricted text must not remain retrievable. Scanned files, tables and diagrams may need separate extraction checks.
+
+No accuracy, cost or time-saving measurements exist for this concept. A next step would be a limited evaluation using non-sensitive documents, with clearly recorded failure cases.
+
+## Related exploration
+
+See the [enterprise document search concept](/projects/enterprise-document-search/) for the proposed stages. A recording can be attached after the owner provides a confirmed video URL.

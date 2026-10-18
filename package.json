@@ -1,0 +1,56 @@
+{
+  "name": "buildwithikram",
+  "version": "1.0.0",
+  "description": "A static business and technology website with repository-authored MDX.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack && node scripts/verify-export.mjs",
+    "preview": "CONTENT_PREVIEW=true next dev",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "check": "npm run lint && npm run typecheck",
+    "test": "playwright test",
+    "test:preview": "CONTENT_PREVIEW=true playwright test",
+    "qa:mcp": "node scripts/mcp-qa.mjs",
+    "format": "prettier --write src content tests scripts *.ts *.mjs *.json",
+    "serve": "node scripts/serve.mjs",
+    "build:preview": "CONTENT_PREVIEW=true npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikramullah7/BuildWithIkram.git"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "next": "^16.4.2",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "rehype-pretty-code": "^0.14.5",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1",
+    "shiki": "^4.5.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@playwright/mcp": "^0.0.83",
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
+    "lighthouse": "^13.5.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
+  },
+  "private": true
+}

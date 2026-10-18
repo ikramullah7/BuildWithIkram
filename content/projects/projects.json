@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "ai-job-matching",
+    "title": "A more thoughtful job search",
+    "name": "AI Remote Job Matching Application",
+    "description": "Explore how AI could turn a long list of remote roles into a more relevant shortlist.",
+    "category": "Artificial intelligence",
+    "status": "Project concept",
+    "image": "/images/job-matching.svg",
+    "problem": "Searching for a suitable remote role involves comparing scattered listings, reading repetitive descriptions and checking the same requirements.",
+    "solution": "A proposed matching workflow extracts job requirements, compares them against a candidate-approved profile and explains each recommendation. People make the final decision.",
+    "technologies": ["Python", "Language models", "Structured data"],
+    "limitations": "Matching can reproduce bias, miss context and expose personal information. Any prototype needs consent, data minimisation and evaluation against a human-reviewed benchmark.",
+    "steps": [
+      "Collect listings from permitted sources",
+      "Extract requirements into a consistent format",
+      "Compare against explicit preferences",
+      "Present a shortlist with reasons"
+    ],
+    "relatedArticles": ["building-ai-job-matching"],
+    "relatedVideos": []
+  },
+  {
+    "slug": "enterprise-document-search",
+    "title": "Find the answer. Keep the context.",
+    "name": "Enterprise Document Search using RAG",
+    "description": "An approach to finding useful answers across internal documents, with sources attached.",
+    "category": "Document intelligence",
+    "status": "Project concept",
+    "image": "/images/document-search.svg",
+    "problem": "Useful information often sits across folders, policies and documents. Finding the right passage can interrupt an otherwise simple task.",
+    "solution": "A proposed retrieval-augmented generation workflow searches approved documents before drafting an answer, with links back to the source material.",
+    "technologies": ["Python", "RAG", "Vector search"],
+    "limitations": "A source citation is not proof of correctness. Permissions, stale documents, retrieval quality and unsupported answers all require explicit evaluation.",
+    "steps": [
+      "Identify approved source documents",
+      "Split and index useful passages",
+      "Retrieve relevant context",
+      "Draft an answer with source references"
+    ],
+    "relatedArticles": ["document-search-with-rag"],
+    "relatedVideos": []
+  },
+  {
+    "slug": "inventory-management",
+    "title": "A clearer view of what\u2019s in stock",
+    "name": "Business Inventory and Stock Management",
+    "description": "A practical application concept for tracking stock movements and spotting replenishment needs.",
+    "category": "Business applications",
+    "status": "Project concept",
+    "image": "/images/inventory.svg",
+    "problem": "Disconnected spreadsheets can make it difficult to understand current stock, investigate adjustments and plan purchases.",
+    "solution": "A proposed application records stock movements, maintains a clear audit history and highlights items that need attention.",
+    "technologies": ["TypeScript", "Data modelling", "Cloud"],
+    "limitations": "This is a design exploration, not an operational inventory system. Concurrency, access controls and reconciliation need implementation and testing.",
+    "steps": [
+      "Map products and locations",
+      "Record every stock movement",
+      "Reconcile physical and recorded quantities",
+      "Review replenishment thresholds"
+    ],
+    "relatedArticles": [],
+    "relatedVideos": []
+  }
+]

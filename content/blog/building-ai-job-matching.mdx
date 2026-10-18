@@ -1,0 +1,62 @@
+---
+title: "Designing an AI job matching workflow"
+description: "A demonstration of turning scattered job listings into an explainable shortlist, with privacy and human judgement built in."
+date: "2026-10-18"
+updated: "2026-10-18"
+category: "Artificial intelligence"
+tags: ["AI", "Automation", "Python"]
+coverImage: "/images/job-matching.svg"
+coverAlt: "Diagram of job listings being compared with preferences to produce a shortlist"
+youtubeUrl: ""
+relatedProject: "ai-job-matching"
+draft: true
+---
+
+This is demonstration content for editorial review. It describes a proposed design, not a tested application or a completed project.
+
+Looking for a remote job can mean reading dozens of descriptions that use different words for similar requirements. A useful tool should help someone understand their options without making decisions on their behalf.
+
+## Start with the decision
+
+The business problem is the time spent comparing listings, not a lack of generated text. Before introducing AI, define what makes a role relevant: location restrictions, working hours, essential skills and the applicant’s own preferences. Keep hard constraints separate from preferences that can be discussed.
+
+A sensible first version takes a small collection of listings from permitted sources and a profile written explicitly for this task. It should not collect private employment records or send a complete CV to a model by default.
+
+## Make the comparison explainable
+
+A proposed pipeline has four steps: collect approved listings, extract requirements, compare explicit criteria and show the reasons behind each suggested match. Missing information should remain unknown rather than being guessed.
+
+The following example illustrates a deterministic location check before any model-assisted comparison. It is not a complete matching system.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Job:
+    title: str
+    allowed_countries: set[str]
+
+def location_allowed(job: Job, country: str) -> bool:
+    return country in job.allowed_countries
+
+example = Job("Software engineer", {"GB", "IE"})
+print(location_allowed(example, "GB"))
+```
+
+This rule is deliberately narrow. Real listings may describe restrictions ambiguously, and an empty country list should trigger manual review rather than implying worldwide eligibility.
+
+## Evaluate before trusting
+
+Create a small, human-reviewed set of relevant and irrelevant listings. Compare the tool’s shortlist against that set and inspect missed opportunities. Check whether explanations reflect the original listing and whether different writing styles affect the results.
+
+An aggregate match score can hide important disagreements. Show the criteria individually so that a person can challenge the recommendation. Do not use this design to screen candidates for employers without a separate fairness and legal review.
+
+## Privacy and limitations
+
+Avoid retaining profile data that is unnecessary for comparison. Document what leaves the device, who processes it and when it is deleted. Model output may be inaccurate, and job listings can become stale.
+
+The next step would be a small prototype with explicit evaluation criteria. No improvements in time saved or matching accuracy have been measured for this concept.
+
+## Continue exploring
+
+Read the [project concept](/projects/ai-job-matching/) for the proposed workflow and its boundaries. A companion video can be added once a real recording and confirmed YouTube URL exist.
