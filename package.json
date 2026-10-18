@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/ikramullah7/BuildWithIkram.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "next": "^16.4.2",
     "next-mdx-remote": "^6.0.0",

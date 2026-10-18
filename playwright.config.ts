@@ -6,7 +6,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: "http://127.0.0.1:3002",
     headless: true,
     launchOptions: {
       executablePath:
@@ -19,7 +19,8 @@ export default defineConfig({
   },
   webServer: {
     command: "node scripts/serve.mjs",
-    url: "http://127.0.0.1:3000",
+    env: { PORT: "3002" },
+    url: "http://127.0.0.1:3002",
     reuseExistingServer: !process.env.CI,
   },
   workers: 2,
