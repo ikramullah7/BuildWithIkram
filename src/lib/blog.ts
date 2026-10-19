@@ -37,7 +37,7 @@ const schema = z
   .refine((v) => !v.updated || v.updated >= v.date, {
     message: "Updated date must not precede publication date",
   });
-export function slugify(value: string) {
+function slugify(value: string) {
   return value
     .toLowerCase()
     .normalize("NFKD")
@@ -76,7 +76,6 @@ export function getArticles(includeDrafts = preview) {
     .filter((a) => includeDrafts || !a.draft)
     .sort((a, b) => b.date.localeCompare(a.date));
 }
-export type Article = ReturnType<typeof getArticles>[number];
 export function formatDate(date: string) {
   return new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
