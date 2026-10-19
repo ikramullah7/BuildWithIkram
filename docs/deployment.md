@@ -1,38 +1,44 @@
-# Cloudflare Pages deployment preparation
+# Deployment
 
-No deployment, account connection, domain purchase or remote push has been performed. The output is static; no Next.js runtime adapter is needed.
+The site uses Cloudflare Pages at https://buildwithikram.pages.dev. It is a static Next.js export; no Worker, runtime adapter, database or backend is needed.
 
-## Before connecting an account
+## Cloudflare Pages settings
 
-- Confirm the production domain; set `NEXT_PUBLIC_SITE_URL` to that HTTPS origin.
-- Fill owner-approved email and social links in `src/config/site.ts`.
-- Review biography and privacy policy; replace legal placeholders.
-- Approve any articles to be published. Keep other articles draft.
-- Ensure `CONTENT_PREVIEW` is absent or `false` in the production environment.
-- Run `npm ci`, `npm run check`, `npm run build`, `npm test`.
-- Inspect `out/`, sitemap, robots, OG image and custom 404 status locally.
-- Review npm audit results, including the documented development-only ESLint dependency issue.
+| Field | Value |
+| --- | --- |
+| Framework preset | Next.js (Static HTML Export) |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Root directory | Repository root |
+| Deploy command | None; Pages publishes the build output |
+| `NODE_VERSION` | `24` |
+| `NEXT_PUBLIC_SITE_URL` | `https://buildwithikram.pages.dev` until a custom domain is configured |
+| `CONTENT_PREVIEW` | Absent or `false` |
 
-## GitHub-based setup — requires owner authorisation
+The optional `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` replaces the public key already configured in `src/config/site.ts`. Public environment variables are embedded at build time, so changes require a rebuild.
 
-After approval, connect the intended GitHub repository to Cloudflare Pages. Select the production branch. Use build command `npm run build`, output directory `out`, root directory `/` and Node version 24 (`NODE_VERSION=24`). There is no `next start` process and no server-side environment required. Supply `NEXT_PUBLIC_SITE_URL` as a build-time variable. Do not enable editorial preview.
+Before publishing, run `npm ci`, `npm run check`, `npm run build` and `npm test`. Review the diff and owner-approved content. Commit and push only with explicit authorisation; Cloudflare automatically rebuilds a connected production branch after a push.
 
-Cloudflare rebuilds after pushes to the connected branch. Preview deployments should use a separate preview origin and disallow indexing; do not publish editorial drafts to account preview URLs without explicit owner approval.
+## Contact delivery
 
-## Domain and HTTPS
+The browser posts directly to Web3Forms. The recipient is determined by the key’s registration, expected to be ikramullah@gmx.co.uk. No mail password is required. The form has validation, a honeypot, duplicate-submit protection and a timeout. Errors preserve the message; uncertain requests are never retried automatically.
 
-In Pages → Custom domains, add the domain you own and follow Cloudflare’s DNS instructions for that domain. Do not change nameservers or purchase anything without approval. Wait for domain validation and the managed TLS certificate, then verify HTTPS and a single canonical host. Configure any desired www-to-apex redirect explicitly through Cloudflare after confirming the owner’s preference.
+Automated tests mock delivery. With explicit permission, send one labelled enquiry from the published site, check the success message and confirm actual inbox receipt, including spam. API acceptance alone does not prove delivery. The owner reports local submission works; inbox receipt has not yet been explicitly confirmed. Review the privacy page and mailbox retention policy before launch.
 
-## Verification checklist
+## Verify after publishing
 
-- All public pages and deep project links return 200.
-- A nonexistent route returns the custom page with HTTP 404, not an SPA fallback.
-- Both draft article slugs return 404; sitemap contains published URLs only.
-- Canonicals, Open Graph URLs and sharing links use the confirmed origin.
-- Robots allows indexing on the production origin.
-- `_headers` is applied, including immutable caching for hashed Next static assets.
-- No image optimisation endpoint, runtime API, server action or `next start` is required.
-- Check mobile navigation, keyboard focus, YouTube links and contact destinations.
-- Run live Lighthouse after deployment; local scores do not establish CDN performance.
+- Public routes return 200; unknown URLs and unpublished article slugs return 404.
+- Canonicals and sitemap use the current public origin; production robots permits indexing.
+- Mobile navigation, links and contact delivery work.
+- Cloudflare applies `public/_headers`; assets and HTTPS load correctly.
+- Run Lighthouse on the deployed site if performance measurements are needed.
 
-[Official Cloudflare static Next.js guide](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/)
+For a custom domain, add it in Pages → Custom domains, follow the DNS instructions, update `NEXT_PUBLIC_SITE_URL`, rebuild and verify HTTPS and canonical URLs.
+
+## Troubleshooting
+
+**`npm ci` says the lockfile is out of sync:** regenerate it with `npm install` using the deployment npm version, review the changes and verify a clean install. Keep `package.json` and `package-lock.json` together. Do not delete the lockfile to bypass the error.
+
+**Wrangler looks for `.next/standalone`:** this is a server/Worker deployment path. Use Cloudflare Pages and the `out` directory; preserve `output: 'export'`.
+
+References: [Cloudflare static Next.js deployment](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/), [Web3Forms integration](https://docs.web3forms.com/getting-started/examples/ajax-contact-form-using-javascript), [Web3Forms troubleshooting](https://docs.web3forms.com/getting-started/troubleshooting).

@@ -16,16 +16,4 @@ Reusable UI includes buttons, navigation, footer, eyebrow labels, page introduct
 
 Breakpoints at 1100, 800 and 600px adapt the composition. Below 800px, navigation becomes a disclosure with an expanded-state button, Escape-to-close and focus return. The mobile menu participates in the normal keyboard sequence; it is not a modal. The skip link targets the main landmark. Visible focus, semantic headings, explicit media dimensions and reduced motion are built in. Concept labels remain visible on every relevant page. Verify 375, 768, 1280 and 1440px.
 
-## Formal rendered review
-
-Screenshots were taken through Microsoft Playwright MCP at all four widths. The initial review found and corrected these concrete issues:
-
-1. Project diagrams did not render because ampersands were unescaped in SVG text. Escaped them and added image decode checks to regression coverage.
-2. Workflow annotations were too small. Increased annotation and description sizes for desktop and mobile.
-3. Concept statuses were visually weak. Increased their size and contrast so readers can distinguish proposals from completed systems.
-4. Footer labels, metadata and secondary text failed contrast checks. Darkened the affected colours across the design.
-5. Footer copyright and privacy navigation were too small. Increased their text sizes.
-6. Syntax-highlighted code exposed a low-contrast orange token and a clipboard status/name mismatch. Darkened the light theme tokens and let the button’s visible status supply its accessible name.
-7. The headline was broad about technology. Made practical AI and automation explicit in the hero eyebrow without adding jargon.
-
-Final screenshots and regression evidence are recorded in docs/testing.md. This review is evidence of the inspected layouts, not a claim of universal accessibility compliance.
+Rendered review and regression checks are described in [testing](testing.md).

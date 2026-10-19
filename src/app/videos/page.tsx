@@ -28,7 +28,7 @@ export default function Videos() {
       </PageIntro>
       <section className="container section-bottom">
         {site.socials.youtube && (
-          <p>
+          <p className="video-channel-link">
             <a className="button" href={site.socials.youtube}>
               Watch on YouTube
               <Arrow />
