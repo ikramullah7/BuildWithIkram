@@ -1242,11 +1242,6 @@ a:hover {
   margin-top: 35px;
   color: #4f6382;
 }
-.contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 90px;
-}
 .contact-note h2 {
   font-size: 26px;
   margin-bottom: 20px;
@@ -1389,9 +1384,8 @@ a:hover {
     font-size: 9px;
   }
   .learning-section,
-  .about-home,
-  .about-layout,
-  .contact-layout {
+.about-home,
+.about-layout {
     gap: 45px;
   }
   .learning-art {
@@ -1640,8 +1634,7 @@ a:hover {
   .prose h2 {
     font-size: 25px;
   }
-  .about-layout,
-  .contact-layout {
+  .about-layout {
     gap: 35px;
   }
   .about-manifesto {
@@ -2085,8 +2078,7 @@ a:hover {
   .upcoming .pill {
     margin-left: 30px;
   }
-  .about-layout,
-  .contact-layout {
+  .about-layout {
     grid-template-columns: 1fr;
     gap: 35px;
   }
@@ -2244,38 +2236,6 @@ a:hover {
 .contact-channel > svg {
   flex-shrink: 0;
 }
-.enquiry-guide {
-  list-style: none;
-  counter-reset: enquiry;
-  padding: 0;
-  margin: 27px 0;
-}
-.enquiry-guide li {
-  counter-increment: enquiry;
-  position: relative;
-  padding-left: 34px;
-  margin-top: 23px;
-}
-.enquiry-guide li::before {
-  content: "0" counter(enquiry);
-  position: absolute;
-  inset-inline-start: 0;
-  top: 2px;
-  font-size: 10px;
-  font-weight: 650;
-  color: var(--blue);
-}
-.enquiry-guide strong {
-  display: block;
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 650;
-}
-.enquiry-guide p {
-  font-size: 12px;
-  line-height: 1.85;
-  margin-top: 5px;
-}
 .footer-socials {
   display: flex;
   flex-wrap: wrap;
@@ -2297,7 +2257,8 @@ a:hover {
 }
 
 /* Contact form: a mobile-first enhancement of the static contact page. */
-.contact-with-form {
+.contact-layout {
+  display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 40px;
   align-items: start;
@@ -2326,6 +2287,7 @@ a:hover {
 .contact-field-row {
   display: grid;
   gap: 18px;
+  margin-bottom: 22px;
 }
 .contact-field {
   min-width: 0;
@@ -2333,9 +2295,6 @@ a:hover {
 }
 .contact-field-row .contact-field {
   margin-bottom: 0;
-}
-.contact-field-row {
-  margin-bottom: 22px;
 }
 .contact-field label {
   display: block;
@@ -2455,7 +2414,7 @@ a:hover {
   }
 }
 @media (min-width: 801px) {
-  .contact-with-form {
+  .contact-layout {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     gap: 60px;
   }

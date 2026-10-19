@@ -43,3 +43,5 @@ Earlier local Lighthouse measurements were mobile 98/100/100/100 and desktop 100
 Automated accessibility checks do not establish complete WCAG conformance. Physical-device and screen-reader testing remain manual checks. Real delivery tests require explicit permission and owner confirmation of receipt.
 
 After documentation cleanup, lint, strict TypeScript, production export verification and all 26 production browser tests passed again (three editorial-only tests skipped). Remaining documentation links were checked. The duplicate public icon was removed; the App Router icon still exports at `/icon.svg`.
+
+Code cleanup verification — 19 October 2026: removed obsolete enquiry-guide CSS, replaced overridden contact layout rules with one layout, merged duplicate field-row declarations, removed an unused article type/export and removed the unused font-source package (the local font and licence remain). Lint, strict type checking, application unused-declaration checks and the clean-install dry run passed. Production tests: 26 passed, three editorial-only skipped. Preview tests: all 29 passed. Production export rebuilt afterwards.

@@ -63,7 +63,7 @@ export default function Contact() {
         )}
       </PageIntro>
       <section
-        className="container contact-layout contact-with-form section-bottom"
+        className="container contact-layout section-bottom"
         aria-label="Ways to get in touch"
       >
         <ContactForm
