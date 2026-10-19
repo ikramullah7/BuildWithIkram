@@ -5,7 +5,7 @@ import { services, deliverySteps } from "@/lib/services";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "AI & automation services for UK businesses",
-  "Start with a paid workflow review and practical plan. Explore automation, AI, DevOps and MLOps services, then test a focused pilot against agreed measures.",
+  "Find out which tasks are worth automating. Ikram reviews your workflow, recommends a first project and helps test AI, automation, DevOps and MLOps solutions.",
   "/solutions/",
 );
 export default function Solutions() {
@@ -13,24 +13,23 @@ export default function Solutions() {
     <>
       <PageIntro
         label="Services for UK businesses"
-        title="Find the bottleneck. Plan the useful change."
+        title="Find out what’s worth automating."
       >
         <p>
-          You don’t need to arrive with an AI tool in mind. Bring the task, the
-          frustration or the process that takes more effort than it should.
+          Tell me which task takes too long, keeps going wrong or needs the same
+          information entered twice. We can work out whether automation or AI
+          would help.
         </p>
       </PageIntro>
       <section className="container section-bottom" id="workflow-review">
         <div className="review-panel">
           <div>
-            <Eyebrow>The first paid step</Eyebrow>
-            <h2>
-              A workflow review.
-              <br />A practical plan.
-            </h2>
+            <Eyebrow>Workflow review</Eyebrow>
+            <h2>A plan for your first automation project.</h2>
             <p>
-              I talk to you about the business, examine the workflow and
-              identify the strongest candidates for automation or AI.
+              I’ll ask you to show me how the task works today. We’ll look at
+              the tools you use, who handles each step and where things get
+              stuck.
             </p>
             <Link className="text-link" href="/contact/">
               Discuss a workflow review
@@ -40,26 +39,24 @@ export default function Solutions() {
           <div>
             <h3>What you receive</h3>
             <ul>
+              <li>A map showing the steps, tools and people involved.</li>
               <li>
-                A map of the agreed workflow, including tools, people and
-                handovers.
+                A ranked list of tasks worth automating, with the reasons for
+                each.
               </li>
               <li>
-                Prioritised opportunities, with assumptions and constraints made
-                clear.
+                A recommendation on which tools or AI services could help,
+                including when a process change would be enough.
               </li>
               <li>
-                A recommendation: simplify the process, integrate tools, use AI
-                or leave it unchanged.
-              </li>
-              <li>
-                A proposed pilot scope, baseline, success measures and
-                operating-cost considerations.
+                A proposal for one pilot, covering what to build, how to test it
+                and the costs we need to check.
               </li>
             </ul>
             <p>
-              Scope, access requirements, fee and deliverables are agreed before
-              work starts. Implementation is a separately scoped next step.
+              Before I start, we’ll agree the fee, what you’ll receive and the
+              access I need. You can then decide whether to go ahead with a
+              pilot.
             </p>
           </div>
         </div>
@@ -77,9 +74,9 @@ export default function Solutions() {
             <div>
               <p>{service.example}</p>
               <dl className="service-details">
-                <dt>What I can deliver</dt>
+                <dt>What I would build</dt>
                 <dd>{service.deliverable}</dd>
-                <dt>What we can measure</dt>
+                <dt>How we would check it</dt>
                 <dd>{service.measure}</dd>
               </dl>
               <Link className="text-link" href="/contact/">
@@ -91,8 +88,8 @@ export default function Solutions() {
         ))}
       </section>
       <section className="section container" id="process">
-        <Eyebrow>From assessment to operation</Eyebrow>
-        <h2>A focused pilot before scaling.</h2>
+        <Eyebrow>After the review</Eyebrow>
+        <h2>Test one task before rolling it out.</h2>
         <div className="delivery-grid">
           {deliverySteps.map(([title, copy], i) => (
             <article key={title}>
@@ -103,9 +100,9 @@ export default function Solutions() {
           ))}
         </div>
         <p className="section-description">
-          Ongoing operation and support are agreed separately. Where results are
-          verifiable and delivery is proven, we can discuss an outcome-linked
-          arrangement.
+          If the pilot does the job, we can discuss rollout, maintenance and
+          support. Results-based pricing is an option when we can define and
+          verify what you’re paying for.
         </p>
         <Link className="text-link" href="/results-as-a-service/">
           Explore Results as a Service
@@ -114,7 +111,7 @@ export default function Solutions() {
       </section>
       <section className="container section-bottom">
         <Eyebrow>Before we start</Eyebrow>
-        <h2>Your questions, answered.</h2>
+        <h2>Questions about working together</h2>
         <div className="faq-list">
           {[
             [
@@ -123,7 +120,7 @@ export default function Solutions() {
             ],
             [
               "Can you work with our existing tools?",
-              "The review identifies your systems, available integrations and constraints. Access and technical feasibility are checked before a pilot is agreed.",
+              "I’ll check how your tools connect, what access is available and what needs to stay as it is. We’ll confirm those details before choosing a pilot.",
             ],
             [
               "What happens to sensitive information?",
@@ -131,15 +128,15 @@ export default function Solutions() {
             ],
             [
               "Will AI make decisions without a person?",
-              "Human review and exception handling are agreed as part of the workflow. The level of automation depends on the task, its consequences and the evidence from testing.",
+              "We decide which steps need someone to check or approve them. The pilot tests the normal cases and the ones that need extra attention.",
             ],
             [
               "How much does it cost?",
-              "The workflow review is paid. Its scope and fee are agreed in advance. A pilot has a separate scope covering implementation, supplier costs and any ongoing support.",
+              "The review has a fee that we agree before work starts. If you choose to go ahead with a pilot, I’ll price that separately and explain any software or support costs.",
             ],
             [
               "Do you guarantee a particular saving?",
-              "No untested saving is promised. We agree a baseline, measurement method and acceptance criteria, then use the pilot to establish what is achievable.",
+              "I won’t promise a saving before we’ve tested the task. We’ll measure how it works today, decide what improvement would matter and check the pilot against that.",
             ],
           ].map(([q, a]) => (
             <details key={q}>

@@ -15,16 +15,16 @@ export default function Home() {
     <>
       <section className="hero container">
         <div className="hero-copy">
-          <Eyebrow>Practical AI & automation for UK businesses</Eyebrow>
+          <Eyebrow>For UK businesses</Eyebrow>
           <h1>
             AI &amp; automation.
             <br />
             <span>Results as a Service.</span>
           </h1>
           <p>
-            I’m Ikram. I help UK businesses turn everyday bottlenecks into
-            practical AI and automation opportunities—with a clear plan, a
-            focused pilot and an agreed way to measure what improves.
+            I’m Ikram. I work with UK businesses to find tasks worth automating.
+            We look at how the work happens today, decide where AI could help,
+            and start with one problem we can measure.
           </p>
           <div className="hero-actions">
             <Button href="/contact/">
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
           <Link className="hero-raas-link" href="/results-as-a-service/">
             <ServiceIcon kind="outcome" />
-            <span>RaaS: agree the result. Measure the progress.</span>
+            <span>What Results as a Service means for your business</span>
             <Arrow />
           </Link>
         </div>
@@ -46,12 +46,12 @@ export default function Home() {
       </section>
       <div className="principles-strip">
         <div className="container">
-          <span>Business context. Engineering depth.</span>
+          <span>From reviewing the task to running the solution</span>
           <span>Automation & AI</span>
           <i />
           <span>DevOps & MLOps</span>
           <i />
-          <span>Clear plans & practical delivery</span>
+          <span>Workflow reviews & implementation</span>
         </div>
       </div>
       <section className="section container">
@@ -81,15 +81,11 @@ export default function Home() {
       <section className="section proof-section">
         <div className="container proof-layout">
           <div>
-            <Eyebrow>See the approach in action</Eyebrow>
-            <h2>
-              One enquiry.
-              <br />
-              Fewer loose ends.
-            </h2>
+            <Eyebrow>Try the demonstration</Eyebrow>
+            <h2>See what happens to an enquiry.</h2>
             <p className="section-description">
-              Try a small workflow that checks sample enquiries, catches
-              duplicates and keeps approval with a person.
+              Run four sample enquiries through the checks. You’ll see which
+              ones need attention and review a draft response.
             </p>
             <Link
               className="text-link"
@@ -108,8 +104,8 @@ export default function Home() {
               <li>A person approves the next step.</li>
             </ul>
             <p>
-              This browser-based example uses rules and templates. It does not
-              send emails or claim client results.
+              Runs in your browser using sample data, rules and templates. No
+              messages are sent.
             </p>
           </div>
         </div>
@@ -117,7 +113,7 @@ export default function Home() {
       <section className="section container" id="process">
         <SectionHeading
           label="How I work"
-          title="A clear plan before a bigger commitment."
+          title="How we get from a problem to a working solution"
         />
         <div className="delivery-grid">
           {deliverySteps.map(([title, copy], i) => (
@@ -129,13 +125,11 @@ export default function Home() {
           ))}
         </div>
         <div className="offer-note">
-          <strong>
-            The first paid step: a workflow review and practical plan.
-          </strong>
+          <strong>Start with a paid workflow review.</strong>
           <p>
-            Understand the bottleneck, identify the best automation or AI
-            candidates and agree whether a scoped pilot is worth pursuing. Scope
-            and fees are agreed before work starts.
+            I’ll look at the steps, tools and people involved, then recommend
+            what to automate and what to leave alone. You’ll get a plan for the
+            first project. We agree the fee and what’s included before I start.
           </p>
           <Link className="text-link" href="/solutions/#workflow-review">
             What the review includes
@@ -147,22 +141,18 @@ export default function Home() {
         <div className="container proof-layout">
           <div>
             <Eyebrow>Results as a Service</Eyebrow>
-            <h2>
-              Agree the result.
-              <br />
-              Make it measurable.
-            </h2>
+            <h2>Pay attention to what actually improves.</h2>
           </div>
           <div>
             <p>
-              I believe the useful measure of technology is what improves in
-              your business. Start with a baseline, agree the quality standard
-              and review the result against it.
+              For me, Results as a Service starts with a simple question: how
+              will we know this has helped? We agree what counts as a successful
+              result and compare it with how the work happens today.
             </p>
             <p>
-              Where a workflow is proven and outcomes can be verified, an
-              ongoing service can include fees linked to agreed results. The
-              measurement, responsibilities and costs are defined together.
+              Once the pilot works reliably, we can discuss an ongoing service
+              and how it should be priced. Fees linked to results only make
+              sense when we can both check those results.
             </p>
             <Link className="text-link" href="/results-as-a-service/">
               How results-led delivery works
@@ -173,22 +163,18 @@ export default function Home() {
       </section>
       <section className="section container about-home">
         <div>
-          <Eyebrow>Your delivery partner</Eyebrow>
-          <h2>
-            Business conversations.
-            <br />
-            <span className="muted-heading">Practical engineering.</span>
-          </h2>
+          <Eyebrow>About me</Eyebrow>
+          <h2>Work directly with Ikram.</h2>
         </div>
         <div>
           <p>
-            My strengths are DevOps, MLOps, automation and AI. I start by
-            talking to you about how the business works, then identify useful
-            opportunities and share a plan you can act on.
+            My strengths are DevOps, MLOps, automation and AI. I’ll ask you to
+            walk me through the task, including the parts that go wrong. That
+            helps me work out where technology could make a difference.
           </p>
           <p>
-            Currently focused on UK businesses, with clear scope, human
-            oversight and a practical next step.
+            I’m starting with UK businesses. The first conversation is about
+            your work and whether I can help.
           </p>
           <Link className="text-link" href="/about/">
             Meet Ikram

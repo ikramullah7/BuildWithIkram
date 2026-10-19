@@ -56,10 +56,7 @@ export function EnquiryDemo() {
       <div className="demo-toolbar">
         <div>
           <h2>Four sample enquiries. One review queue.</h2>
-          <p>
-            Fixed synthetic examples include a missing email and a repeated
-            enquiry.
-          </p>
+          <p>The batch includes a missing email and a repeated enquiry.</p>
         </div>
         <div className="demo-actions">
           <button
@@ -131,10 +128,10 @@ export function EnquiryDemo() {
             <strong>To:</strong> {current.email}
           </p>
           <blockquote>
-            Hi {current.name.split(" ")[0]}, thanks for sharing the workflow you
-            would like to improve. I’d like to understand the current steps, the
-            tools involved and what a useful result would look like. We can then
-            discuss whether a paid workflow review is an appropriate next step.
+            Hi {current.name.split(" ")[0]}, thanks for telling me about the
+            task. Which tools do you use, and where does the work get held up?
+            That will help me understand whether I can help. If a paid review
+            makes sense, I’ll explain what it covers before you decide.
           </blockquote>
           <p>
             Check the recipient and wording before approving. This demonstration
@@ -178,9 +175,7 @@ export function EnquiryDemo() {
         </p>
       </noscript>
       <p className="demo-limit">
-        All records are fictional. The checks use required-field and
-        exact-duplicate rules; the draft uses a template, not an AI model. State
-        is held in this tab and clears on reset or reload.
+        All records are fictional. Reset or reload the page to start again.
       </p>
     </div>
   );

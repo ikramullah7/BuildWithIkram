@@ -1,60 +1,60 @@
 export const services = [
   {
     id: "automation",
-    title: "Less repetitive admin",
+    title: "Cut down on repeated admin",
     icon: "workflow" as const,
     problem:
-      "Enquiries, spreadsheets and routine tasks keep pulling your team away from useful work.",
+      "Your team copies information between emails, spreadsheets and other tools, then checks the same details again.",
     example:
-      "Capture an enquiry, check the details, create a record and prepare a response for a person to approve.",
+      "For example, an enquiry could be checked, added to your tracker and used to prepare a response for approval.",
     deliverable:
-      "A mapped workflow, connected tools, exception handling and a clear handover.",
+      "The connections between your tools, the checks each record needs and a way to handle anything that fails.",
     measure:
-      "Handling time, correctly completed records and the work that still needs a person.",
+      "How long each task takes, how many records are correct and how often someone needs to step in.",
   },
   {
     id: "document-search",
-    title: "Useful answers from your information",
+    title: "Find answers in your documents",
     icon: "ai" as const,
     problem:
-      "People spend time finding answers or moving information between documents and systems.",
+      "Finding a policy, checking a document or copying details into a system takes longer than it should.",
     example:
-      "Search approved documents with source references, or extract information for a person to check.",
+      "Search a set of approved documents and show the source of each answer, or pull out details for someone to check.",
     deliverable:
-      "A focused AI-assisted workflow with agreed sources, access boundaries and quality checks.",
+      "A search or extraction tool using the documents you choose, with access controls and checks for incorrect answers.",
     measure:
-      "Answer quality, extraction accuracy and exceptions against an agreed test set.",
+      "How often answers are correct, whether the sources support them and which questions need a person.",
   },
   {
     id: "reliable-delivery",
-    title: "Reliable delivery behind the workflow",
+    title: "Automate releases and monitor AI systems",
     icon: "system" as const,
     problem:
-      "Manual releases, disconnected systems or fragile AI deployments make improvements difficult to sustain.",
+      "Deployments need manual work, systems fail without warning or nobody can see why an AI task went wrong.",
     example:
-      "Automate a release pipeline, connect an existing system or introduce monitoring for an AI workflow.",
+      "Automate the release steps, connect your systems or add monitoring so failures can be investigated.",
     deliverable:
-      "DevOps, MLOps and integration work scoped around the systems you actually use.",
+      "DevOps, MLOps and integration work for the systems you already use, with documentation for the people running them.",
     measure:
-      "Release reliability, failed runs, recovery time and ongoing operating costs.",
+      "Failed releases, recovery time, errors and the cost of keeping the system running.",
   },
 ];
 
 export const deliverySteps = [
   [
-    "Understand",
-    "Talk through the task, tools, people and exceptions. Establish what happens today and what needs to improve.",
+    "Review the task",
+    "You show me how the work happens, which tools you use and where you lose time. We include the cases that go wrong.",
   ],
   [
-    "Plan",
-    "A paid workflow review produces prioritised opportunities, a practical recommendation and a scoped next step.",
+    "Choose the first project",
+    "I recommend which tasks to automate, explain the trade-offs and give you a plan for one pilot.",
   ],
   [
-    "Pilot",
-    "Test one agreed workflow against a baseline, quality checks and acceptance criteria before expanding it.",
+    "Build and test",
+    "We test the pilot against real requirements and compare it with how the task worked before.",
   ],
   [
-    "Measure & improve",
-    "Review the result, document the handover and agree any ongoing operation, monitoring and support.",
+    "Decide what comes next",
+    "We review the results. If you want to continue, we agree the rollout, handover and any ongoing support.",
   ],
 ];

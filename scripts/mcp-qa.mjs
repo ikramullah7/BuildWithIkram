@@ -12,6 +12,9 @@ const routes = [
   ["demo", "/demonstrations/enquiry-workflow/"],
   ["about", "/about/"],
   ["contact", "/contact/"],
+  ["privacy", "/privacy/"],
+  ["articles", "/blog/"],
+  ["videos", "/videos/"],
 ];
 if (process.env.CONTENT_PREVIEW === "true")
   routes.push(["article", "/blog/building-ai-job-matching/"]);

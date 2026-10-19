@@ -1,9 +1,9 @@
 [
   {
     "slug": "ai-job-matching",
-    "title": "A more thoughtful job search",
+    "title": "An AI-assisted job shortlist",
     "name": "AI Remote Job Matching Application",
-    "description": "Explore how AI could turn a long list of remote roles into a more relevant shortlist.",
+    "description": "A concept for comparing remote roles with a candidate’s preferences and explaining the shortlist.",
     "category": "Artificial intelligence",
     "status": "Project concept",
     "image": "/images/job-matching.svg",
@@ -22,9 +22,9 @@
   },
   {
     "slug": "enterprise-document-search",
-    "title": "Find the answer. Keep the context.",
+    "title": "Search internal documents with source references",
     "name": "Enterprise Document Search using RAG",
-    "description": "An approach to finding useful answers across internal documents, with sources attached.",
+    "description": "A document-search concept that shows where each answer came from.",
     "category": "Document intelligence",
     "status": "Project concept",
     "image": "/images/document-search.svg",
@@ -43,14 +43,14 @@
   },
   {
     "slug": "inventory-management",
-    "title": "A clearer view of what\u2019s in stock",
+    "title": "Track stock movements and replenishment",
     "name": "Business Inventory and Stock Management",
-    "description": "A practical application concept for tracking stock movements and spotting replenishment needs.",
+    "description": "An application concept for recording stock movements and identifying items to reorder.",
     "category": "Business applications",
     "status": "Project concept",
     "image": "/images/inventory.svg",
     "problem": "Disconnected spreadsheets can make it difficult to understand current stock, investigate adjustments and plan purchases.",
-    "solution": "A proposed application records stock movements, maintains a clear audit history and highlights items that need attention.",
+    "solution": "A proposed application records stock movements, keeps a history of changes and highlights items that need attention.",
     "technologies": ["TypeScript", "Data modelling", "Cloud"],
     "limitations": "This is a design exploration, not an operational inventory system. Concurrency, access controls and reconciliation need implementation and testing.",
     "steps": [

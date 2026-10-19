@@ -102,12 +102,12 @@ export function BlogList({ articles }: { articles: Summary[] }) {
           <h2>
             {articles.length
               ? "No articles match these filters."
-              : "Good ideas deserve a proper write-up."}
+              : "No articles published yet."}
           </h2>
           <p>
             {articles.length
               ? "Try another category or tag to explore more."
-              : "Articles will share the thinking, implementation and limitations behind each project. The first drafts are being prepared for review."}
+              : "The first drafts are under review. In the meantime, you can try the enquiry demonstration or read the project concepts."}
           </p>
           <Link className="text-link" href="/projects/">
             Explore the project concepts

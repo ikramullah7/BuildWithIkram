@@ -165,7 +165,7 @@ test("confirmed contact, social and YouTube destinations", async ({ page }) => {
   ).toHaveAttribute("href", "/contact/");
   await page.goto("/videos/");
   await expect(
-    page.getByRole("heading", { name: "Every useful build has a story." }),
+    page.getByRole("heading", { name: "No videos listed here yet." }),
   ).toBeVisible();
   await expect(
     page.getByRole("main").getByRole("link", { name: "Watch on YouTube" }),

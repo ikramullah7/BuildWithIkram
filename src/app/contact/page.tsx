@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Contact",
-  "Discuss your business workflow with Ikram. Start with a paid review and practical plan for automation, AI, DevOps or MLOps, then consider a focused pilot.",
+  "Tell Ikram which business task you want to improve. Ask about a paid workflow review, an automation or AI project, or help with DevOps and MLOps.",
   "/contact/",
 );
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
     {
       label: "LinkedIn",
       href: site.socials.linkedin,
-      description: "Connect with me and start a professional conversation.",
+      description: "Message me on LinkedIn.",
       address: "",
     },
     {
@@ -32,8 +32,7 @@ export default function Contact() {
     {
       label: "YouTube",
       href: site.socials.youtube,
-      description:
-        "Follow the channel for practical builds and clear explanations.",
+      description: "Watch the builds and explanations on my channel.",
       address: "",
     },
   ].filter((channel) => channel.href);
@@ -75,14 +74,14 @@ export default function Contact() {
           <div className="contact-note">
             <h2>What happens next?</h2>
             <p>
-              I’ll review your enquiry and reply to clarify the problem and
-              whether I can help. If a workflow review makes sense, we’ll agree
-              its scope, fee and deliverables before any paid work starts.
+              I’ll read your message and reply with any questions. If a paid
+              review is the right next step, I’ll explain what it covers and the
+              fee before you decide.
             </p>
             <p>
-              Currently focused on UK businesses. Share a brief description
-              rather than confidential documents or customer data. Content
-              questions and exploratory conversations are welcome too.
+              I’m currently working with UK businesses. A short description is
+              enough to start. Please leave out confidential documents and
+              customer data. You can also ask about something I’ve shared.
             </p>
           </div>
           <nav

@@ -82,8 +82,8 @@ export default async function Project({
           <h2>Limitations and next steps</h2>
           <p>{p.limitations}</p>
           <p>
-            The next step is to define a small prototype and evaluation criteria
-            before making any claims about results.
+            A prototype would need to be tested against these limitations before
+            being used in a business.
           </p>
           <h2>Read and watch</h2>
           {articles.length ? (
@@ -97,8 +97,7 @@ export default async function Project({
             ))
           ) : (
             <p>
-              Accompanying articles are awaiting editorial review. Videos will
-              be linked here when recordings are available.
+              There are no accompanying articles or videos published here yet.
             </p>
           )}
           {relatedVideos.map((v) => (

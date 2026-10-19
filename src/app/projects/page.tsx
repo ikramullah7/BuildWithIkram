@@ -13,12 +13,11 @@ export default function Projects() {
     <>
       <PageIntro
         label="The workbench"
-        title="See the approach. Check the boundaries."
+        title="Examples of how the work could run"
       >
         <p>
-          A working browser demonstration and a collection of project concepts.
-          Examples use synthetic data; none are presented as client case
-          studies.
+          Try the enquiry demonstration below or read through the project
+          concepts. These use sample data and are not client case studies.
         </p>
       </PageIntro>
       <section className="container section-bottom">
@@ -26,11 +25,10 @@ export default function Projects() {
           <span className="pill">
             Interactive demonstration · Synthetic data
           </span>
-          <h2>From enquiry to a reviewed next step.</h2>
+          <h2>Check and review a sample enquiry.</h2>
           <p>
-            Check sample enquiries, catch duplicates and approve a prepared
-            response. Rules and templates make the workflow visible without
-            sending data to an AI service.
+            Run the checks, see what gets held back and approve a draft
+            response. The example uses rules and templates in your browser.
           </p>
           <Link className="text-link" href="/demonstrations/enquiry-workflow/">
             Try the enquiry workflow

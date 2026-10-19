@@ -13,7 +13,7 @@ const manrope = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "BuildWithIkram — AI & automation for UK businesses",
+    default: "BuildWithIkram: AI & automation for UK businesses",
     template: "%s | BuildWithIkram",
   },
   description: site.description,

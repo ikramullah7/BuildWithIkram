@@ -23,21 +23,19 @@ test("business journey explains the paid review and results boundaries", async (
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Which task is slowing your business down?",
   );
-  await expect(
-    page.getByText(/fee and deliverables before any paid work starts/),
-  ).toBeVisible();
+  await expect(page.getByText(/the fee before you decide/)).toBeVisible();
   await page.goto("/solutions/");
   await page
     .getByText("Do you guarantee a particular saving?", { exact: true })
     .click();
-  await expect(page.getByText(/No untested saving is promised/)).toBeVisible();
+  await expect(
+    page.getByText(/I won’t promise a saving before we’ve tested the task/),
+  ).toBeVisible();
   await page
     .getByRole("link", { name: "Explore Results as a Service" })
     .click();
   await expect(page).toHaveURL(/\/results-as-a-service\/$/);
-  await expect(
-    page.getByText(/An outcome-linked service is considered once the pilot/),
-  ).toBeVisible();
+  await expect(page.getByText(/Once the pilot works reliably/)).toBeVisible();
 });
 
 test("sample workflow holds exceptions, requires approval and resets without external requests", async ({

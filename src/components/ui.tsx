@@ -146,8 +146,8 @@ export function ContactCTA() {
           your business down?
         </h2>
         <p>
-          Tell me how the work happens today. We can discuss whether a paid
-          workflow review is a useful next step.
+          Tell me what takes too long or keeps going wrong. I’ll let you know
+          whether I can help.
         </p>
       </div>
       <Button href="/contact/">
@@ -169,7 +169,7 @@ export function Footer() {
           <p>
             Practical AI & automation.
             <br />
-            Measurable business progress.
+            Built around your business.
           </p>
           <nav className="footer-socials" aria-label="Social links">
             {site.socials.linkedin && (

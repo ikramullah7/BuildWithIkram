@@ -4,7 +4,7 @@ import { Arrow } from "@/components/icons";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Results as a Service",
-  "Agree a business outcome, establish a baseline and test the improvement. Explore how measured automation can become an ongoing results-led service.",
+  "Decide what counts as a successful result, test it in a pilot and discuss how an ongoing AI or automation service should be measured and priced.",
   "/results-as-a-service/",
 );
 export default function Results() {
@@ -12,67 +12,60 @@ export default function Results() {
     <>
       <PageIntro
         label="Results as a Service · RaaS"
-        title="Success starts with an agreed result."
+        title="What result would make this worth doing?"
       >
         <p>
-          A useful automation should improve the work. My approach starts with
-          the outcome you value, the current baseline and a clear way to check
-          whether the change delivers.
+          That’s where I start. We agree what needs to improve, measure how the
+          task works today and decide how we’ll check the result.
         </p>
       </PageIntro>
       <section className="container section-bottom proof-layout">
         <div>
-          <Eyebrow>From principle to practice</Eyebrow>
-          <h2>
-            Measure first.
-            <br />
-            Prove the workflow.
-            <br />
-            Then agree the service.
-          </h2>
+          <Eyebrow>How it works</Eyebrow>
+          <h2>Test the result before committing to a service.</h2>
         </div>
         <div className="prose">
           <p>
-            Results as a Service means taking responsibility for an agreed
-            operational outcome over time. It needs a dependable workflow,
-            visible quality checks and a shared definition of success.
+            For me, Results as a Service means looking after a task and being
+            accountable for how well it gets done over time.
           </p>
           <p>
-            I start with a paid workflow review and a separately scoped pilot.
-            An outcome-linked service is considered once the pilot establishes
-            what can be delivered, measured and sustained.
+            We start with a paid workflow review. If you want to go ahead, I’ll
+            price a pilot separately so we can test whether the proposed
+            approach works.
           </p>
           <p>
-            This is not a blanket promise of revenue growth or guaranteed
-            savings. Some problems are better served by a fixed-scope project or
-            a simpler process change.
+            Once the pilot works reliably, we can discuss an ongoing service and
+            how it should be priced. Fees linked to results only make sense when
+            we can both check those results. The pilot may also show that a
+            one-off project is a better fit.
           </p>
           <Link className="text-link" href="/solutions/#workflow-review">
-            Start with the workflow review
+            What the workflow review includes
             <Arrow />
           </Link>
         </div>
       </section>
       <section className="results-section section">
         <div className="container">
-          <Eyebrow>Examples of measurable outcomes</Eyebrow>
-          <h2>Define what counts. Include the quality.</h2>
+          <Eyebrow>Choosing the measure</Eyebrow>
+          <h2>What would count as a successful result?</h2>
           <div className="outcome-grid">
             {[
               [
-                "Enquiry administration",
-                "An eligible enquiry is correctly recorded and routed within an agreed time.",
-                "Missing information, duplicates and spam are treated separately.",
+                "An enquiry reaches the right person",
+                "The record has the required details and is routed within the time we agreed.",
+                "We decide how to handle duplicates, spam and missing details before counting completed enquiries.",
               ],
               [
-                "Document processing",
-                "An extracted record passes the agreed validation and acceptance checks.",
-                "Rework and rejected records do not count as accepted outcomes.",
+                "A document record passes its checks",
+                "The extracted details match the source document and pass the checks for that task.",
+                "A record that needs correcting is rework, not a completed result.",
               ],
               [
-                "Reliable operation",
-                "An agreed workflow completes correctly, with failures visible and recoverable.",
-                "Input availability, human review and supplier dependencies are part of the agreement.",
+                "A task runs correctly",
+                "The task finishes, its output passes the checks and someone can investigate any failure.",
+                "We include the input data, supplier dependencies and any human review in the agreement.",
               ],
             ].map(([title, result, condition]) => (
               <article className="evidence-panel" key={title}>
@@ -83,41 +76,33 @@ export default function Results() {
             ))}
           </div>
           <p className="section-footnote">
-            Illustrative service definitions, not delivered client results.
-            Final measures depend on the workflow.
+            These are examples to discuss, not client results. The measure needs
+            to match your task.
           </p>
         </div>
       </section>
       <section className="section container proof-layout">
         <div>
-          <Eyebrow>The commercial arrangement</Eyebrow>
-          <h2>
-            Clear scope.
-            <br />
-            Visible costs.
-            <br />
-            Shared expectations.
-          </h2>
+          <Eyebrow>Costs and responsibilities</Eyebrow>
+          <h2>Know what you’re paying for.</h2>
         </div>
         <div className="prose">
           <p>
-            A suitable arrangement might combine a setup fee, an operating fee
-            and a charge for verified outcomes. A fixed monthly fee with agreed
-            volume and quality limits may fit another workflow better.
+            A service could have a setup fee, a monthly fee to keep it running
+            and a charge for completed results. In other cases, a fixed monthly
+            fee with a volume limit could be easier to manage.
           </p>
           <p>
-            Before an ongoing service starts, we agree the baseline, acceptance
-            checks, measurement period, customer responsibilities, volume
-            limits, supplier costs and how missed standards or rework are
-            handled.
+            Before you sign up, we’ll agree what counts, how it’s checked, the
+            software costs and what each of us needs to provide. We’ll also
+            decide how to handle errors, rework and missed targets.
           </p>
           <p>
-            Time released creates capacity; it is only a cash saving if
-            expenditure actually falls. Reports should distinguish those
-            effects.
+            Saving time gives your team more capacity. It only saves cash if
+            your spending falls, so we’ll report those separately.
           </p>
           <Link className="text-link" href="/demonstrations/enquiry-workflow/">
-            See how a small workflow can be checked
+            Try the enquiry checks
             <Arrow />
           </Link>
         </div>

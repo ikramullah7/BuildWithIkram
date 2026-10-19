@@ -3,7 +3,7 @@ import { Breadcrumbs, ContactCTA, Eyebrow, PageIntro } from "@/components/ui";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Enquiry workflow demonstration",
-  "Try a synthetic enquiry workflow: check missing information, detect duplicates and review a template response before approving a simulated next step.",
+  "Run four sample enquiries through duplicate and missing-information checks, then review a draft response and approve a simulated next step.",
   "/demonstrations/enquiry-workflow/",
 );
 export default function EnquiryWorkflow() {
@@ -18,13 +18,13 @@ export default function EnquiryWorkflow() {
         />
       </div>
       <PageIntro
-        label="Interactive demonstration · Synthetic data"
-        title="An enquiry should have a clear next step."
+        label="Interactive example · Sample data"
+        title="Try the checks behind an enquiry workflow."
       >
         <p>
-          Explore how simple checks and human approval can make a small
-          administrative workflow easier to follow. Run the sample checks, then
-          review an eligible record.
+          Run the sample batch, see which enquiries are held back and review a
+          draft response. This example uses rules and templates in your browser.
+          It doesn’t call an AI service or send messages.
         </p>
       </PageIntro>
       <section
@@ -36,57 +36,58 @@ export default function EnquiryWorkflow() {
       <section className="results-section section">
         <div className="container proof-layout">
           <div>
-            <Eyebrow>What the example demonstrates</Eyebrow>
-            <h2>
-              Visible checks.
-              <br />A person in control.
-            </h2>
+            <Eyebrow>What to look for</Eyebrow>
+            <h2>Which enquiries can move forward?</h2>
           </div>
           <div className="prose">
             <p>
-              The sample batch contains four records: two eligible enquiries,
-              one with a missing email and one exact duplicate. Eligible records
-              require an explicit approval before the demonstration marks the
-              next step as approved.
+              There are four fictional records. Two have the details needed for
+              review, one is missing an email address and one is an exact
+              duplicate. You have to approve an eligible enquiry before its next
+              step is marked as approved.
             </p>
             <p>
-              The counters report what happens in this example. They are not
-              client outcomes, speed benchmarks or evidence of business savings.
+              The counters show what happened to this sample batch. They don’t
+              measure speed, time saved or business performance.
             </p>
             <p>
-              Rules are sufficient for these checks. AI could assist with
-              unstructured messages in a separately tested implementation, but
-              it is not needed to prove every step of a workflow.
+              These checks can be handled with rules. AI could help interpret
+              less structured messages in a real project, but that would need
+              its own tests.
             </p>
           </div>
         </div>
       </section>
       <section className="section container proof-layout">
         <div>
-          <Eyebrow>From example to a business pilot</Eyebrow>
-          <h2>What a real implementation needs.</h2>
+          <Eyebrow>Taking it further</Eyebrow>
+          <h2>What would change in your business?</h2>
         </div>
         <div className="prose">
           <ul>
             <li>
-              Agreed input sources, permissions and a durable record of each
-              enquiry.
+              Enquiries would come from your chosen inbox or form and be saved
+              in your system.
             </li>
             <li>
-              Rules for duplicates, missing information, routing and human
-              approval.
+              We’d define the checks, routing and approvals for your team.
             </li>
-            <li>Approved integrations for records, messages and reminders.</li>
-            <li>Monitoring, retries, audit history and a recovery process.</li>
             <li>
-              A baseline and test set covering accuracy, handling time, rework
-              and running costs.
+              Messages and reminders would use integrations you’ve approved.
+            </li>
+            <li>
+              Failures would need monitoring, a record of what happened and a
+              way to recover.
+            </li>
+            <li>
+              We’d compare accuracy, handling time, rework and costs with your
+              current process.
             </li>
           </ul>
           <p>
-            This static demonstration has no inbox, CRM, external AI call or
-            persistent storage. A production workflow would be separately scoped
-            after reviewing your systems and data requirements.
+            The demonstration keeps its state in this tab only. An inbox
+            connection, CRM and permanent records would be part of a separately
+            priced pilot.
           </p>
         </div>
       </section>

@@ -5,7 +5,7 @@ export function Workflow() {
     <div
       className="workflow-board"
       role="img"
-      aria-label="Illustrative Results as a Service approach: understand the business problem, select appropriate AI and automation, and measure an agreed outcome. This is a process illustration, not a display of client results."
+      aria-label="Illustrative Results as a Service process: review the task, choose the automation and check the result."
     >
       <div className="board-top">
         <span>AI + AUTOMATION → BUSINESS RESULTS</span>
@@ -18,11 +18,11 @@ export function Workflow() {
         <div>
           <small>01 / UNDERSTAND</small>
           <strong>Your business problem</strong>
-          <p>Find the bottleneck. Establish the baseline.</p>
+          <p>Look at how the task works today.</p>
         </div>
       </div>
       <div className="connector">
-        <span>Choose the useful intervention.</span>
+        <span>Choose what to change.</span>
       </div>
       <div className="workflow-node">
         <span className="node-symbol node-ai">
@@ -30,12 +30,12 @@ export function Workflow() {
         </span>
         <div>
           <small>02 / AI & AUTOMATION</small>
-          <strong>Intelligence, with a purpose.</strong>
-          <p>Use AI, rules and integrations where they fit.</p>
+          <strong>Build the first automation</strong>
+          <p>Use AI where it helps with the task.</p>
         </div>
       </div>
       <div className="connector second">
-        <span>Test the workflow. Keep people in control.</span>
+        <span>Test it with the people doing the work.</span>
       </div>
       <div className="workflow-node">
         <span className="node-symbol">
@@ -43,12 +43,12 @@ export function Workflow() {
         </span>
         <div>
           <small>03 / MEASURE</small>
-          <strong>An agreed, measurable result.</strong>
-          <p>Check quality, exceptions and improvement.</p>
+          <strong>Check whether it helped</strong>
+          <p>Compare the result with the starting point.</p>
         </div>
       </div>
       <div className="board-bottom">
-        <span>RaaS approach · Scope and measures agreed first</span>
+        <span>RaaS process example</span>
       </div>
     </div>
   );
