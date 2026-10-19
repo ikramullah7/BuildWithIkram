@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Contact",
-  "Contact Ikram about a paid project, explore a business problem or ask a question about the AI, automation and technology shared on BuildWithIkram.",
+  "Discuss your business workflow with Ikram. Start with a paid review and practical plan for automation, AI, DevOps or MLOps, then consider a focused pilot.",
   "/contact/",
 );
 export default function Contact() {
@@ -46,11 +46,11 @@ export default function Contact() {
     <>
       <PageIntro
         label="Start a conversation"
-        title="What would you like to build?"
+        title="Which task is slowing your business down?"
       >
         <p>
-          Planning a paid project, exploring a business problem or curious about
-          something I’m building? I’d be glad to hear from you.
+          Tell me where time is lost, which tools you use and what you would
+          like to improve. You don’t need to know which technology is right.
         </p>
         {primaryContact && (
           <div className="contact-intro-actions">
@@ -73,15 +73,16 @@ export default function Contact() {
         />
         <aside className="contact-details">
           <div className="contact-note">
-            <h2>A useful starting point</h2>
+            <h2>What happens next?</h2>
             <p>
-              Share the problem, who it affects and what a useful outcome would
-              look like. For a project enquiry, include any timing or budget you
-              have in mind.
+              I’ll review your enquiry and reply to clarify the problem and
+              whether I can help. If a workflow review makes sense, we’ll agree
+              its scope, fee and deliverables before any paid work starts.
             </p>
             <p>
-              If it’s a content question, a link to the relevant article or
-              video helps me understand the context.
+              Currently focused on UK businesses. Share a brief description
+              rather than confidential documents or customer data. Content
+              questions and exploratory conversations are welcome too.
             </p>
           </div>
           <nav

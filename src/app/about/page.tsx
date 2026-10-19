@@ -1,61 +1,73 @@
 import { PageIntro, ContactCTA, Eyebrow } from "@/components/ui";
+import Link from "next/link";
+import { Arrow } from "@/components/icons";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "About Ikram",
-  "Meet the thinking behind BuildWithIkram: an interest in business problems, practical engineering, AI, automation and cloud.",
+  "Work directly with Ikram on business automation and AI, backed by strengths in DevOps and MLOps. Start with a business conversation and a practical plan.",
   "/about/",
 );
 export default function About() {
   return (
     <>
       <PageIntro
-        label="A little about me"
-        title="Curiosity, with a practical purpose."
+        label="The person behind BuildWithIkram"
+        title="Understand the business. Build what helps."
       >
         <p>
-          I’m Ikram, a technology professional interested in how AI, cloud
-          engineering and automation can help solve real business problems.
+          I’m Ikram. My strengths are DevOps, MLOps, automation and AI. I help
+          businesses identify useful opportunities and turn them into a
+          practical plan for delivery.
         </p>
       </PageIntro>
       <section className="container about-layout section-bottom">
         <div className="about-manifesto">
-          <span className="manifesto-mark" aria-hidden="true">
-            ↗
-          </span>
+          <Eyebrow>A personal approach</Eyebrow>
           <p>
-            Understand the problem.
+            Listen to the problem.
             <br />
-            Build with care.
+            Make a clear plan.
             <br />
-            <span>Share what you learn.</span>
+            <span>Measure what improves.</span>
           </p>
-          <small>THE BUILDWITHIKRAM APPROACH</small>
+          <small>BUILDWITHIKRAM · UK BUSINESS FOCUS</small>
         </div>
         <div className="prose">
-          <Eyebrow>Why this exists</Eyebrow>
-          <h2>Make the connection between business and technology.</h2>
+          <h2>A conversation before a tool choice.</h2>
           <p>
-            BuildWithIkram is a place to explore useful ideas through practical
-            projects. The aim is to make the thinking clear enough for business
-            owners and the implementation useful enough for technical readers.
+            I start by talking to you about the business: where time is lost,
+            where information gets stuck and which tasks depend on repeated
+            manual effort. Then I identify the strongest automation or AI
+            candidates and share a plan.
+          </p>
+          <h2>Engineering that supports the result.</h2>
+          <p>
+            DevOps helps connect implementation with dependable delivery and
+            operation. MLOps brings that discipline to machine-learning and AI
+            workflows. Alongside automation, these are the foundations I bring
+            to the work.
           </p>
           <p>
-            I’m interested in the whole process: understanding what needs to
-            improve, choosing an appropriate approach, building a focused
-            version and being honest about its limitations.
+            The first engagement is a paid workflow review. A focused pilot can
+            follow where the scope, technical fit and success criteria are
+            clear.
           </p>
-          <h2>Learning in the open</h2>
+          <h2>Accountability through measurement.</h2>
           <p>
-            The projects, articles and planned videos are different ways of
-            sharing the same work. Concepts are labelled as concepts. Results
-            will only be reported when they have actually been tested.
+            I believe in Results as a Service: define the improvement, test the
+            workflow and agree how performance will be checked. Outcome-linked
+            arrangements need evidence and clear responsibilities before they
+            become a commercial commitment.
           </p>
-          <h2>What you’ll find here</h2>
           <p>
-            AI and automation explorations, cloud engineering decisions and
-            application ideas grounded in everyday business questions. Clear
-            explanations come first; technical detail is there when it helps.
+            BuildWithIkram is currently focused on UK businesses. Projects and
+            technical writing also provide a place to share the approach openly,
+            with concepts distinguished from tested work.
           </p>
+          <Link className="text-link" href="/solutions/">
+            Explore how we could work together
+            <Arrow />
+          </Link>
         </div>
       </section>
       <ContactCTA />

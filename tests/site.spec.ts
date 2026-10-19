@@ -6,6 +6,8 @@ const preview = process.env.CONTENT_PREVIEW === "true";
 const routes = [
   "/",
   "/solutions/",
+  "/results-as-a-service/",
+  "/demonstrations/enquiry-workflow/",
   "/projects/",
   "/projects/ai-job-matching/",
   "/projects/enterprise-document-search/",
@@ -103,7 +105,7 @@ test("mobile navigation, keyboard and escape", async ({ page }) => {
   await page.getByRole("button", { name: "Open navigation" }).click();
   await page
     .getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Projects", exact: true })
+    .getByRole("link", { name: "Examples", exact: true })
     .click();
   await expect(page).toHaveURL(/\/projects\/$/);
   await expect(
@@ -159,8 +161,8 @@ test("confirmed contact, social and YouTube destinations", async ({ page }) => {
   await expect(
     page
       .locator(".hero-actions")
-      .getByRole("link", { name: "Watch on YouTube" }),
-  ).toHaveAttribute("href", "https://www.youtube.com/@BuildWithIkram");
+      .getByRole("link", { name: "Discuss your business problem" }),
+  ).toHaveAttribute("href", "/contact/");
   await page.goto("/videos/");
   await expect(
     page.getByRole("heading", { name: "Every useful build has a story." }),

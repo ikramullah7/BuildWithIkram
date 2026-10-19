@@ -139,16 +139,19 @@ export function ContactCTA() {
   return (
     <section className="container cta-section">
       <div>
-        <Eyebrow>Start with a problem</Eyebrow>
+        <Eyebrow>Start with your business problem</Eyebrow>
         <h2>
-          What could work better
+          Which task is slowing
           <br />
-          in your business?
+          your business down?
         </h2>
-        <p>Let’s explore where thoughtful technology could help.</p>
+        <p>
+          Tell me how the work happens today. We can discuss whether a paid
+          workflow review is a useful next step.
+        </p>
       </div>
       <Button href="/contact/">
-        Start a conversation
+        Discuss your business problem
         <Arrow />
       </Button>
     </section>
@@ -161,14 +164,12 @@ export function Footer() {
         <div>
           <Link href="/" className="brand">
             <Mark />
-            <span>
-              BuildWithIkram<span className="brand-dot">.</span>
-            </span>
+            <span>BuildWithIkram</span>
           </Link>
           <p>
-            Practical technology.
+            Practical AI & automation.
             <br />
-            Real business problems.
+            Measurable business progress.
           </p>
           <nav className="footer-socials" aria-label="Social links">
             {site.socials.linkedin && (
@@ -181,8 +182,9 @@ export function Footer() {
         <div className="footer-links">
           <div>
             <span>Explore</span>
-            <Link href="/solutions/">Solutions</Link>
-            <Link href="/projects/">Projects</Link>
+            <Link href="/solutions/">Services</Link>
+            <Link href="/results-as-a-service/">Results as a Service</Link>
+            <Link href="/projects/">Examples & concepts</Link>
             <Link href="/blog/">Articles</Link>
           </div>
           <div>
@@ -198,7 +200,7 @@ export function Footer() {
           © {new Date().getFullYear()} {site.name}. Built with purpose.
         </p>
         <Link href="/privacy/">Privacy</Link>
-        <span>AI · Automation · Cloud</span>
+        <span>AI · Automation · DevOps · MLOps</span>
       </div>
     </footer>
   );

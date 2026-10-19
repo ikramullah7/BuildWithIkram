@@ -1,231 +1,197 @@
 import Link from "next/link";
-import { Arrow, Play } from "@/components/icons";
-import {
-  Button,
-  Eyebrow,
-  SectionHeading,
-  ProjectCard,
-  ContactCTA,
-} from "@/components/ui";
+import { Arrow, ServiceIcon } from "@/components/icons";
+import { Button, Eyebrow, SectionHeading, ContactCTA } from "@/components/ui";
 import { Workflow } from "@/components/workflow";
-import { projects } from "@/lib/projects";
-import { getArticles } from "@/lib/blog";
+import { services, deliverySteps } from "@/lib/services";
 import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Practical AI & technology for real business problems",
+  "AI & automation for UK businesses",
   site.description,
   "/",
 );
 export default function Home() {
-  const articles = getArticles();
   return (
     <>
       <section className="hero container">
         <div className="hero-copy">
-          <Eyebrow>Practical AI, automation & technology</Eyebrow>
+          <Eyebrow>Practical AI & automation for UK businesses</Eyebrow>
           <h1>
-            Real problems.
+            AI &amp; automation.
             <br />
-            Practical technology.
-            <br />
-            <span>Better possibilities.</span>
+            <span>Results as a Service.</span>
           </h1>
           <p>
-            I’m Ikram. I explore how AI, automation and modern software can
-            solve everyday business challenges — and share the process, one
-            practical project at a time.
+            I’m Ikram. I help UK businesses turn everyday bottlenecks into
+            practical AI and automation opportunities—with a clear plan, a
+            focused pilot and an agreed way to measure what improves.
           </p>
           <div className="hero-actions">
-            <Button href="/projects/">
-              Explore projects
+            <Button href="/contact/">
+              Discuss your business problem
               <Arrow />
             </Button>
-            <Button href={site.socials.youtube || "/videos/"} secondary>
-              <Play />
-              {site.socials.youtube ? "Watch on YouTube" : "Explore the videos"}
+            <Button href="/demonstrations/enquiry-workflow/" secondary>
+              Try a working example
+              <Arrow />
             </Button>
           </div>
-          <div className="hero-note">
-            <span />
-            Built to be useful. Shared to be understood.
-          </div>
+          <Link className="hero-raas-link" href="/results-as-a-service/">
+            <ServiceIcon kind="outcome" />
+            <span>RaaS: agree the result. Measure the progress.</span>
+            <Arrow />
+          </Link>
         </div>
         <Workflow />
       </section>
       <div className="principles-strip">
         <div className="container">
-          <span>Thoughtful ideas. Practical implementation.</span>
-          <span>AI & automation</span>
+          <span>Business context. Engineering depth.</span>
+          <span>Automation & AI</span>
           <i />
-          <span>Cloud engineering</span>
+          <span>DevOps & MLOps</span>
           <i />
-          <span>Business applications</span>
+          <span>Clear plans & practical delivery</span>
         </div>
       </div>
       <section className="section container">
         <SectionHeading
-          label="Where technology can help"
-          title="Start with the problem."
+          label="Where I can help"
+          title="Which part of the work slows you down?"
           href="/solutions/"
-          link="Explore the solutions"
+          link="Explore the services"
         />
         <div className="problems-grid">
-          {[
-            [
-              "01",
-              "Too much manual work",
-              "Repetitive tasks shouldn’t take up your best thinking time. Explore workflows that reduce the busywork.",
-              "/solutions/#automation",
-            ],
-            [
-              "02",
-              "Information, everywhere",
-              "Make scattered documents and data easier to search, understand and put to work.",
-              "/solutions/#document-search",
-            ],
-            [
-              "03",
-              "Tools that don’t quite fit",
-              "Explore practical applications built around the way a business actually works.",
-              "/solutions/#applications",
-            ],
-          ].map(([n, title, copy, href]) => (
-            <Link href={href} className="problem" key={n}>
+          {services.map((service) => (
+            <Link
+              className="problem"
+              href={`/solutions/#${service.id}`}
+              key={service.id}
+            >
               <span className="problem-number">
-                {n}
+                <ServiceIcon kind={service.icon} />
                 <Arrow />
               </span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
+              <h3>{service.title}</h3>
+              <p>{service.problem}</p>
             </Link>
           ))}
         </div>
       </section>
-      <section className="section projects-section">
-        <div className="container">
-          <SectionHeading
-            label="From idea to implementation"
-            title="A closer look at the work."
-            href="/projects/"
-            link="View all projects"
-          />
-          <p className="section-description">
-            Practical explorations of what technology could make possible.
-            <br />
-            Every project starts with a real-world question.
-          </p>
-          <div className="project-grid">
-            {projects.slice(0, 2).map((p, i) => (
-              <ProjectCard key={p.slug} project={p} index={i} />
-            ))}
+      <section className="section proof-section">
+        <div className="container proof-layout">
+          <div>
+            <Eyebrow>See the approach in action</Eyebrow>
+            <h2>
+              One enquiry.
+              <br />
+              Fewer loose ends.
+            </h2>
+            <p className="section-description">
+              Try a small workflow that checks sample enquiries, catches
+              duplicates and keeps approval with a person.
+            </p>
+            <Link
+              className="text-link"
+              href="/demonstrations/enquiry-workflow/"
+            >
+              Open the interactive demonstration
+              <Arrow />
+            </Link>
           </div>
-          <p className="section-footnote">
-            The projects above are clearly labelled concepts. Follow along as
-            the ideas develop.
-          </p>
+          <div className="evidence-panel">
+            <span className="pill">Working demonstration · Synthetic data</span>
+            <h3>Check → prepare → review</h3>
+            <ul>
+              <li>Missing information goes to review.</li>
+              <li>Duplicate records are held back.</li>
+              <li>A person approves the next step.</li>
+            </ul>
+            <p>
+              This browser-based example uses rules and templates. It does not
+              send emails or claim client results.
+            </p>
+          </div>
         </div>
       </section>
-      <section className="section container learning-section">
-        <div className="learning-art" aria-hidden="true">
-          <div className="video-window">
-            <div className="video-window-top">
-              <span />
-              <span />
-              <span />
-              <small>BUILD / EXPLAIN / SHARE</small>
-            </div>
-            <div className="video-window-body">
-              <span className="video-play">▷</span>
-              <strong>Behind the build.</strong>
-              <p>The decisions. The details. The lessons.</p>
-              <div className="video-timeline">
-                <span />
-              </div>
-            </div>
-          </div>
-          <span className="learning-caption">
-            A place for clear explanations.
-          </span>
+      <section className="section container" id="process">
+        <SectionHeading
+          label="How I work"
+          title="A clear plan before a bigger commitment."
+        />
+        <div className="delivery-grid">
+          {deliverySteps.map(([title, copy], i) => (
+            <article key={title}>
+              <span className="step-number">0{i + 1}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
         </div>
-        <div className="learning-copy">
-          <Eyebrow>Learn alongside the build</Eyebrow>
-          <h2>
-            The process is
-            <br />
-            part of the story.
-          </h2>
+        <div className="offer-note">
+          <strong>
+            The first paid step: a workflow review and practical plan.
+          </strong>
           <p>
-            Not just what gets built, but why. The YouTube channel will take you
-            through the thinking, the trade-offs and the implementation behind
-            each project.
+            Understand the bottleneck, identify the best automation or AI
+            candidates and agree whether a scoped pilot is worth pursuing. Scope
+            and fees are agreed before work starts.
           </p>
-          <Link className="text-link" href="/videos/">
-            Explore upcoming video topics
+          <Link className="text-link" href="/solutions/#workflow-review">
+            What the review includes
             <Arrow />
           </Link>
-          <span className="small quiet">
-            First recordings are being planned.
-          </span>
         </div>
       </section>
-      <section className="section writing-section">
-        <div className="container">
-          <SectionHeading
-            label="Notes from the workbench"
-            title="Ideas worth unpacking."
-            href="/blog/"
-            link="Browse articles"
-          />
-          {articles.length ? (
-            <div className="article-rows">
-              {articles.slice(0, 3).map((a) => (
-                <Link key={a.slug} href={`/blog/${a.slug}/`}>
-                  <span>{a.category}</span>
-                  <h3>{a.title}</h3>
-                  <Arrow />
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="writing-empty">
-              <span className="writing-symbol" aria-hidden="true">
-                Aa<span>↗</span>
-              </span>
-              <div>
-                <h3>Clear thinking, put into words.</h3>
-                <p>
-                  Practical guides and project notes are on the way. Each
-                  article will connect the business problem with the technical
-                  detail.
-                </p>
-              </div>
-              <span className="pill">In the works</span>
-            </div>
-          )}
+      <section className="section results-section">
+        <div className="container proof-layout">
+          <div>
+            <Eyebrow>Results as a Service</Eyebrow>
+            <h2>
+              Agree the result.
+              <br />
+              Make it measurable.
+            </h2>
+          </div>
+          <div>
+            <p>
+              I believe the useful measure of technology is what improves in
+              your business. Start with a baseline, agree the quality standard
+              and review the result against it.
+            </p>
+            <p>
+              Where a workflow is proven and outcomes can be verified, an
+              ongoing service can include fees linked to agreed results. The
+              measurement, responsibilities and costs are defined together.
+            </p>
+            <Link className="text-link" href="/results-as-a-service/">
+              How results-led delivery works
+              <Arrow />
+            </Link>
+          </div>
         </div>
       </section>
       <section className="section container about-home">
         <div>
-          <Eyebrow>The person behind the projects</Eyebrow>
+          <Eyebrow>Your delivery partner</Eyebrow>
           <h2>
-            Hi, I’m Ikram.
+            Business conversations.
             <br />
-            <span className="muted-heading">Let’s make technology useful.</span>
+            <span className="muted-heading">Practical engineering.</span>
           </h2>
         </div>
         <div>
           <p>
-            I’m a technology professional interested in the space where business
-            problems meet thoughtful engineering.
+            My strengths are DevOps, MLOps, automation and AI. I start by
+            talking to you about how the business works, then identify useful
+            opportunities and share a plan you can act on.
           </p>
           <p>
-            BuildWithIkram is where I explore AI, cloud and automation through
-            practical projects — sharing what I’m building, what I’m learning
-            and what needs another look.
+            Currently focused on UK businesses, with clear scope, human
+            oversight and a practical next step.
           </p>
           <Link className="text-link" href="/about/">
-            A little more about me
+            Meet Ikram
             <Arrow />
           </Link>
         </div>

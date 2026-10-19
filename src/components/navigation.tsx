@@ -4,10 +4,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Arrow, Mark } from "./icons";
 const links = [
-  ["/solutions/", "Solutions"],
-  ["/projects/", "Projects"],
-  ["/blog/", "Articles"],
-  ["/videos/", "Videos"],
+  ["/solutions/", "Services"],
+  ["/projects/", "Examples"],
+  ["/results-as-a-service/", "Results as a Service"],
   ["/about/", "About"],
 ];
 export function Navigation() {
@@ -32,7 +31,6 @@ export function Navigation() {
           <Mark />
           <span>
             BuildWith<span className="brand-accent">Ikram</span>
-            <span className="brand-dot">.</span>
           </span>
         </Link>
         <button

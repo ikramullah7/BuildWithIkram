@@ -2,9 +2,11 @@
 
 ## Direction
 
-An approachable engineering publication: warm paper, quiet blue, charcoal type, measured whitespace and original workflow diagrams. Show a business question before implementation detail. Avoid testimonial placeholders, unsupported success figures, neon effects and decorative stock photography.
+A founder-led AI and automation service for UK businesses: warm paper, quiet blue, charcoal type, measured whitespace and original workflow diagrams. Show a business question before implementation detail. Avoid testimonial placeholders, unsupported success figures, neon effects and decorative stock photography.
 
-Manrope variable is bundled locally: its open forms, clear lowercase shapes and range of weights suit both business copy and technical navigation. A single family gives a consistent voice with little font overhead. Code uses the browser’s monospace family. Font licence is in `src/assets/fonts/OFL.txt`.
+Manrope variable is bundled locally: its open forms, clear lowercase shapes and range of weights suit both business copy and technical navigation. The opening headline explicitly names AI, automation and Results as a Service. A direct RaaS link explains the approach. Use consistent SVG icons: a chip motif for AI, connected steps for automation and a target for agreed outcomes. Lead the commercial journey towards the paid workflow review, scoped pilot and measured operational improvement. A single family gives a consistent voice with little font overhead. Code uses the browser’s monospace family. Font licence is in `src/assets/fonts/OFL.txt`.
+
+The wordmark is BuildWithIkram without a trailing full stop. Its brand mark uses the owner-selected AI core with a white check mark, blue-to-indigo centre and blue connection pins, with matching geometry in the header, footer, favicon and social image. Keep it distinct from the supporting AI chip icon.
 
 ## Tokens and components
 
