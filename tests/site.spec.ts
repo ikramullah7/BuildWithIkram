@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
+import { absolute } from "../src/config/site";
 const preview = process.env.CONTENT_PREVIEW === "true";
 const routes = [
   "/",
@@ -33,7 +34,7 @@ for (const route of routes)
     );
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
-      new RegExp(route.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"),
+      absolute(route),
     );
     const links = await page
       .locator("a[href]")
@@ -127,16 +128,46 @@ test("unknown pages and excluded drafts return 404", async ({ page }) => {
     await expect(page.getByText("0 articles", { exact: true })).toBeVisible();
   }
 });
-test("contact and video destinations are honest when unconfigured", async ({
-  page,
-}) => {
+test("confirmed contact, social and YouTube destinations", async ({ page }) => {
   await page.goto("/contact/");
-  await expect(page.getByText("Coming soon", { exact: true })).toHaveCount(4);
-  await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: "Email Ikram", exact: true }),
+  ).toHaveAttribute("href", "mailto:ikramullah@gmx.co.uk");
+  const channels = page.getByRole("navigation", {
+    name: "Contact and social links",
+  });
+  const destinations = [
+    ["Email", "mailto:ikramullah@gmx.co.uk"],
+    ["LinkedIn", "https://www.linkedin.com/in/ullahikram/"],
+    ["GitHub", "https://github.com/ikramullah7/BuildWithIkram"],
+    ["YouTube", "https://www.youtube.com/@BuildWithIkram"],
+  ];
+  await expect(channels.getByRole("link")).toHaveCount(destinations.length);
+  for (const [name, href] of destinations) {
+    await expect(
+      channels.getByRole("link", { name: new RegExp(`^${name}`) }),
+    ).toHaveAttribute("href", href);
+  }
+  await expect(page.getByText("Coming soon", { exact: true })).toHaveCount(0);
+  const footer = page.getByRole("navigation", { name: "Social links" });
+  for (const [name, href] of destinations.slice(1)) {
+    await expect(
+      footer.getByRole("link", { name, exact: true }),
+    ).toHaveAttribute("href", href);
+  }
+  await page.goto("/");
+  await expect(
+    page
+      .locator(".hero-actions")
+      .getByRole("link", { name: "Watch on YouTube" }),
+  ).toHaveAttribute("href", "https://www.youtube.com/@BuildWithIkram");
   await page.goto("/videos/");
   await expect(
     page.getByRole("heading", { name: "Every useful build has a story." }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("main").getByRole("link", { name: "Watch on YouTube" }),
+  ).toHaveAttribute("href", "https://www.youtube.com/@BuildWithIkram");
   await expect(page.locator("iframe")).toHaveCount(0);
 });
 test("editorial preview renders MDX, highlights code, filters and links", async ({

@@ -170,6 +170,13 @@ export function Footer() {
             <br />
             Real business problems.
           </p>
+          <nav className="footer-socials" aria-label="Social links">
+            {site.socials.linkedin && (
+              <a href={site.socials.linkedin}>LinkedIn</a>
+            )}
+            {site.socials.github && <a href={site.socials.github}>GitHub</a>}
+            {site.socials.youtube && <a href={site.socials.youtube}>YouTube</a>}
+          </nav>
         </div>
         <div className="footer-links">
           <div>

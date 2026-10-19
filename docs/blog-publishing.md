@@ -7,7 +7,7 @@
 5. Preview with `npm run preview` or `CONTENT_PREVIEW=true npm run build` followed by the static server. Editorial preview must remain local.
 6. Review copy, cover, code, TOC anchors, project links, accessibility and optional video playback. Ask the owner to approve publication.
 7. Only after approval, set `draft: false` and use the actual publication date. Run `npm run check`, `npm run build`, `npm test`.
-8. Review the Git diff; commit. Push only when authorised. A connected Cloudflare Pages repository rebuilds automatically after an authorised push.
+8. Review the Git diff. Commit and push only when explicitly authorised. A connected Cloudflare Pages repository rebuilds automatically after an authorised push.
 
 ## Required frontmatter
 
