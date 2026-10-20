@@ -1,75 +1,87 @@
 import { PageIntro } from "@/components/ui";
+import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Privacy — owner review required",
-  "An owner-review privacy policy template describing hosting, contact submissions through Web3Forms and third-party video loading.",
+  "Privacy information",
+  "How BuildWithIkram handles website enquiries, hosting information and optional video loading, with a contact address for privacy questions.",
   "/privacy/",
 );
 export default function Privacy() {
   return (
     <>
-      <PageIntro label="Privacy" title="A straightforward approach to privacy.">
-        <p className="notice">
-          Template — owner review required before publication. This is not a
-          final legal policy.
+      <PageIntro
+        label="Privacy"
+        title="How information is handled on this site"
+      >
+        <p>
+          This page explains what happens when you browse the site or send me a
+          message.
         </p>
       </PageIntro>
       <article className="container legal prose section-bottom">
-        <h2>About this website</h2>
-        <p>
-          BuildWithIkram is planned as a static website about business and
-          technology. The owner must add their legal identity, contact details
-          and an effective date here before launch.
+        <p className="notice">
+          This notice is under review. Retention periods, the legal basis for
+          processing and the remaining provider details are still being
+          confirmed.
         </p>
-        <h2>Information and hosting</h2>
+        <h2>Who to contact</h2>
         <p>
-          The site has no visitor accounts or analytics scripts and is hosted on
-          Cloudflare Pages. Hosting providers may process technical request
-          information, including IP addresses and access logs. The owner must
-          confirm the actual hosting settings, purposes, legal basis, retention
-          periods and international transfers.
+          I’m Ikram, the person behind BuildWithIkram. For questions about your
+          information, email <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
-        <h2>Videos and external services</h2>
+        <h2>Browsing the website</h2>
         <p>
-          Video embeds connect to YouTube only when a visitor chooses to load
-          them. They use YouTube’s privacy-enhanced embed domain. When published
-          video metadata is added, thumbnails may load from YouTube’s image
-          service before playback. External links take you to services with
-          their own privacy practices.
-        </p>
-        <h2>Contact form</h2>
-        <p>
-          When you submit the contact form, your name, email address, enquiry
-          type and message are sent to Web3Forms so the website owner can
-          receive and respond to your enquiry by email. Web3Forms may also
-          process technical request information for delivery and spam
-          prevention. The website does not keep a separate submission database.
+          The site is hosted on Cloudflare Pages. It has no visitor accounts or
+          analytics scripts. Cloudflare may process technical information, such
+          as IP addresses and request logs, to serve and protect the site.
         </p>
         <p>
-          Web3Forms processes and retains submissions under its own service
-          terms and the form’s retention settings. The owner must confirm those
-          settings and document how long enquiries are retained in their
-          mailbox. See the{" "}
-          <a href="https://web3forms.com/privacy">Web3Forms privacy policy</a>{" "}
-          for details of its processing, retention and infrastructure.
+          You can read more in{" "}
+          <a href="https://www.cloudflare.com/privacypolicy/">
+            Cloudflare’s privacy policy
+          </a>
+          .
         </p>
-        <h2>Email and social links</h2>
+        <h2>Sending an enquiry</h2>
         <p>
-          If you choose to contact the owner using an email or social link, the
-          relevant provider processes that communication. The owner must
-          describe how messages are used, stored and deleted.
+          The contact form sends your name, email address, enquiry type and
+          message to Web3Forms. The service delivers your enquiry to my email
+          inbox so I can reply. This website does not keep a separate database
+          of submissions.
         </p>
-        <h2>Your rights</h2>
         <p>
-          Before publication, confirm the laws that apply and explain applicable
-          access, correction, deletion, objection and complaint rights,
-          including how to exercise them and the relevant supervisory authority.
+          Web3Forms may process technical information for delivery and spam
+          prevention. Its handling and retention of submissions are described in
+          the{" "}
+          <a href="https://web3forms.com/privacy">Web3Forms privacy policy</a>.
+          The retention settings for this form and my mailbox are still being
+          confirmed.
         </p>
-        <h2>Before launch</h2>
         <p>
-          Replace this template with a reviewed policy that accurately reflects
-          the live site, its providers, any storage or cookies, and the owner’s
-          obligations. Update it when the site’s data practices change.
+          If you email me directly or contact me through a social link, that
+          service handles the communication under its own privacy terms.
+        </p>
+        <h2>Videos and external links</h2>
+        <p>
+          A YouTube player loads only when you choose to play an embedded video.
+          When videos are listed, their thumbnails may load from YouTube before
+          playback. Links to other websites take you to services with their own
+          privacy practices.
+        </p>
+        <h2>The enquiry demonstration</h2>
+        <p>
+          The interactive example uses fictional records. Its state is kept in
+          your browser tab and clears when you reset or reload the page. The
+          example does not send the records to an external service.
+        </p>
+        <h2>Questions about your information</h2>
+        <p>
+          You can email me to ask about information you have shared, including
+          requests to access, correct or delete it. The{" "}
+          <a href="https://ico.org.uk/for-the-public/">
+            Information Commissioner’s Office
+          </a>{" "}
+          explains data protection rights and how to raise a concern.
         </p>
       </article>
     </>

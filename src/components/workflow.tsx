@@ -1,54 +1,54 @@
+import { ServiceIcon } from "./icons";
+
 export function Workflow() {
   return (
     <div
       className="workflow-board"
       role="img"
-      aria-label="From a business problem through thoughtful engineering to a practical solution. An illustrative workflow, not a live product."
+      aria-label="Illustrative Results as a Service process: review the task, choose the automation and check the result."
     >
       <div className="board-top">
-        <span>
-          <i />
-          THE PRACTICAL APPROACH
-        </span>
-        <span>01 — 03</span>
+        <span>AI + AUTOMATION → BUSINESS RESULTS</span>
+        <span>RaaS</span>
       </div>
-      <div className="workflow-node node-one">
-        <span className="node-symbol">↳</span>
+      <div className="workflow-node">
+        <span className="node-symbol">
+          <ServiceIcon kind="document" />
+        </span>
         <div>
           <small>01 / UNDERSTAND</small>
-          <strong>A real business problem</strong>
-          <p>Start with what needs to work better.</p>
+          <strong>Your business problem</strong>
+          <p>Look at how the task works today.</p>
         </div>
-        <span className="node-check">✓</span>
       </div>
       <div className="connector">
-        <span>Less friction. More clarity.</span>
+        <span>Choose what to change.</span>
       </div>
-      <div className="workflow-node node-two">
-        <span className="node-symbol">⌘</span>
+      <div className="workflow-node">
+        <span className="node-symbol node-ai">
+          <ServiceIcon kind="ai" />
+        </span>
         <div>
-          <small>02 / BUILD</small>
-          <strong>Thoughtful engineering</strong>
-          <p>The right tools, for the right reasons.</p>
+          <small>02 / AI & AUTOMATION</small>
+          <strong>Build the first automation</strong>
+          <p>Use AI where it helps with the task.</p>
         </div>
-        <span className="node-check">✓</span>
       </div>
       <div className="connector second">
-        <span>Test. Learn. Improve.</span>
+        <span>Test it with the people doing the work.</span>
       </div>
-      <div className="workflow-node node-three">
-        <span className="node-symbol">↗</span>
+      <div className="workflow-node">
+        <span className="node-symbol">
+          <ServiceIcon kind="outcome" />
+        </span>
         <div>
-          <small>03 / MAKE IT USEFUL</small>
-          <strong>A practical solution</strong>
-          <p>Technology that serves the business.</p>
+          <small>03 / MEASURE</small>
+          <strong>Check whether it helped</strong>
+          <p>Compare the result with the starting point.</p>
         </div>
-        <span className="node-check">✓</span>
       </div>
       <div className="board-bottom">
-        <span className="mini-lines">▥</span>
-        <span>Business first. Technology second.</span>
-        <span>↗</span>
+        <span>RaaS process example</span>
       </div>
     </div>
   );

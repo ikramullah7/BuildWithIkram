@@ -2,7 +2,7 @@
 export const site = {
   name: "BuildWithIkram",
   description:
-    "Solving real business problems with AI, automation and technology. Practical projects, clear explanations and thoughtful engineering.",
+    "AI and automation for UK businesses. Work with Ikram to review a task, plan an automation project and test whether it improves the way your business works.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://buildwithikram.pages.dev",
   email: "ikramullah@gmx.co.uk",
   // Web3Forms form keys are public identifiers designed for browser submissions.

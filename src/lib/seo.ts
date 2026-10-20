@@ -21,7 +21,7 @@ export function metadata(
           url: absolute("/images/social.png"),
           width: 1200,
           height: 630,
-          alt: "BuildWithIkram — practical technology, real business problems",
+          alt: "BuildWithIkram: AI and automation for measurable business progress",
         },
       ],
     },

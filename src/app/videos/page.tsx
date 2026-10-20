@@ -8,7 +8,7 @@ import { projects } from "@/lib/projects";
 import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Videos — Behind the build",
+  "Videos: behind the build",
   "Follow the thinking and implementation behind BuildWithIkram projects. Explore upcoming video topics and companion resources.",
   "/videos/",
 );
@@ -18,12 +18,11 @@ export default function Videos() {
     <>
       <PageIntro
         label="Behind the build"
-        title="See the thinking. Follow the process."
+        title="Watch how the projects are built"
       >
         <p>
-          Clear explanations of business problems, practical builds and the
-          decisions along the way. This is where the YouTube projects will come
-          together.
+          Videos will show the code, tools and decisions behind the projects,
+          including what worked and what needed changing.
         </p>
       </PageIntro>
       <section className="container section-bottom">
@@ -86,7 +85,7 @@ export default function Videos() {
                 ▷
               </span>
               <Eyebrow>First recordings in preparation</Eyebrow>
-              <h2>Every useful build has a story.</h2>
+              <h2>No videos listed here yet.</h2>
               <p>
                 No videos have been published here yet. Planned topics include
                 building this website, exploring document search and designing
@@ -94,10 +93,10 @@ export default function Videos() {
               </p>
             </div>
             <div className="upcoming">
-              <h2>On the drawing board</h2>
+              <h2>Planned topics</h2>
               {[
                 "Building BuildWithIkram with Codex, skills and MCP",
-                "Designing a clearer AI job matching workflow",
+                "Designing an AI job matching workflow",
                 "Exploring document search with sources",
               ].map((t, i) => (
                 <div key={t}>

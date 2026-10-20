@@ -36,6 +36,8 @@ if (process.env.CONTENT_PREVIEW !== "true") {
 for (const route of [
   "",
   "solutions",
+  "results-as-a-service",
+  "demonstrations/enquiry-workflow",
   "projects",
   "blog",
   "videos",

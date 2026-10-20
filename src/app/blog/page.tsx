@@ -3,8 +3,8 @@ import { BlogList } from "@/components/blog-list";
 import { getArticles } from "@/lib/blog";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Articles — Notes from the workbench",
-  "Practical guides and thoughtful project notes connecting business problems with AI, automation and implementation details.",
+  "Articles and project notes",
+  "Notes on building AI and automation projects, including the business problem, implementation choices, test results and limitations.",
   "/blog/",
 );
 export default function Blog() {
@@ -17,11 +17,11 @@ export default function Blog() {
     <>
       <PageIntro
         label="Notes from the workbench"
-        title="A little more understanding. A useful next step."
+        title="Articles and project notes"
       >
         <p>
-          Project notes, practical guides and ideas worth unpacking. Business
-          context first, with the technical detail to help you go further.
+          Write-ups covering the problem, how I approached it, the code involved
+          and what I found when testing.
         </p>
       </PageIntro>
       <section className="container section-bottom">

@@ -32,16 +32,26 @@ With the static server running, `npm run qa:mcp` connects to the project-configu
 
 ## Latest observed results — 19 October 2026
 
+- Brand refinement: applied the owner-selected option 2: a blue-to-indigo AI core with connection pins and a white check mark; removed the wordmark’s trailing full stop in the header, footer and sharing image; updated the SVG favicon. Build, lint, strict TypeScript and all 30 production tests passed again. Desktop/mobile wordmark screenshots were visually reviewed; four-width layout checks recorded no overflow or browser errors.
+- Opening-view refinement: the headline names AI, automation and Results as a Service; a direct RaaS link, AI chip icon and outcome target make the positioning visible immediately. The hero workflow is explicitly illustrative, and the separate rules-based demonstration remains accurately labelled.
+- Business positioning now focuses on UK businesses, a paid workflow review, a scoped pilot and conditional Results as a Service delivery.
 - ESLint, strict TypeScript and production export verification passed.
-- Production browser suite: 26 passed, three editorial-only tests skipped.
-- Editorial preview suite: all 29 passed; production rebuilt afterwards.
-- Contact screenshots reviewed at all four widths, plus validation, mocked rejection and mocked success states; no horizontal overflow or page exceptions observed.
-- Owner reports local form submission works. Actual inbox receipt and the published form still require confirmation.
+- Final production browser suite: 30 passed, three editorial-only tests skipped.
+- Editorial preview suite: all 33 passed. Production was rebuilt afterwards and draft routes remain excluded.
+- All 13 public routes are covered by metadata, link, image and axe checks, plus overflow checks at 375, 768, 1280 and 1440 pixels.
+- Business journey tests cover the paid review, contact route, FAQs and outcome-pricing boundaries.
+- Interactive demonstration tests cover held exceptions, exact duplicates, explicit approval, duplicate-approval prevention, reset, reload and mobile accessibility. They verify that the demonstration makes no external requests.
+- Microsoft Playwright MCP captured the homepage, services, RaaS, examples, demonstration, About and contact pages at all four widths. Document widths matched viewports and no console errors or page exceptions were recorded. Screenshots were visually reviewed, including desktop and mobile approval states. Spacing collisions and an oversized About label found during review were corrected.
+- Contact delivery tests remain mocked. No real email, external AI call, deployment, commit or push was made during this implementation.
 
-Earlier local Lighthouse measurements were mobile 98/100/100/100 and desktop 100/100/100/100 using compressed static delivery and a production-origin simulation. These predate the current contact form and are not live-site benchmarks. The earlier production dependency audit found zero vulnerabilities; five high findings were confined to the development lint dependency chain. Re-run audits to establish current status.
+Screenshots and reports are disposable and were removed after the final cleanup review. Regenerate them with `QA_BASE_URL=http://127.0.0.1:3002 npm run qa:mcp` when the test server is running, or use the default port 3000. No generated evidence files are required for deployment.
 
-Automated accessibility checks do not establish complete WCAG conformance. Physical-device and screen-reader testing remain manual checks. Real delivery tests require explicit permission and owner confirmation of receipt.
+Final cleanup removed superseded hero styles and redundant icon visibility overrides. Lint, strict TypeScript, production export verification and all 30 production browser tests passed (three editorial-only tests skipped). Four-width MCP review recorded no horizontal overflow or browser errors; desktop and mobile screenshots were inspected before clearing the generated files.
 
-After documentation cleanup, lint, strict TypeScript, production export verification and all 26 production browser tests passed again (three editorial-only tests skipped). Remaining documentation links were checked. The duplicate public icon was removed; the App Router icon still exports at `/icon.svg`.
+## Measurement limits
 
-Code cleanup verification — 19 October 2026: removed obsolete enquiry-guide CSS, replaced overridden contact layout rules with one layout, merged duplicate field-row declarations, removed an unused article type/export and removed the unused font-source package (the local font and licence remain). Lint, strict type checking, application unused-declaration checks and the clean-install dry run passed. Production tests: 26 passed, three editorial-only skipped. Preview tests: all 29 passed. Production export rebuilt afterwards.
+The demonstration uses synthetic records, required-field and exact-duplicate rules, and a template draft. Its counters describe this sample session; they are not customer outcomes or performance benchmarks. No ongoing service, CRM integration or persistent prospect store is implemented by the marketing site.
+
+Earlier local Lighthouse measurements were mobile 98/100/100/100 and desktop 100/100/100/100 using compressed static delivery and a production-origin simulation. These predate the current pages and are not live-site benchmarks. Re-run performance and dependency audits to establish current measurements.
+
+Automated accessibility checks do not establish complete WCAG conformance. Physical-device and screen-reader testing remain manual checks. The owner reports local contact submission works; actual inbox receipt and delivery on the deployed origin still need explicit confirmation. Real delivery tests require permission.

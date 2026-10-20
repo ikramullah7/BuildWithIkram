@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Contact",
-  "Contact Ikram about a paid project, explore a business problem or ask a question about the AI, automation and technology shared on BuildWithIkram.",
+  "Tell Ikram which business task you want to improve. Ask about a paid workflow review, an automation or AI project, or help with DevOps and MLOps.",
   "/contact/",
 );
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
     {
       label: "LinkedIn",
       href: site.socials.linkedin,
-      description: "Connect with me and start a professional conversation.",
+      description: "Message me on LinkedIn.",
       address: "",
     },
     {
@@ -32,8 +32,7 @@ export default function Contact() {
     {
       label: "YouTube",
       href: site.socials.youtube,
-      description:
-        "Follow the channel for practical builds and clear explanations.",
+      description: "Watch the builds and explanations on my channel.",
       address: "",
     },
   ].filter((channel) => channel.href);
@@ -46,11 +45,11 @@ export default function Contact() {
     <>
       <PageIntro
         label="Start a conversation"
-        title="What would you like to build?"
+        title="Which task is slowing your business down?"
       >
         <p>
-          Planning a paid project, exploring a business problem or curious about
-          something I’m building? I’d be glad to hear from you.
+          Tell me where time is lost, which tools you use and what you would
+          like to improve. You don’t need to know which technology is right.
         </p>
         {primaryContact && (
           <div className="contact-intro-actions">
@@ -73,15 +72,16 @@ export default function Contact() {
         />
         <aside className="contact-details">
           <div className="contact-note">
-            <h2>A useful starting point</h2>
+            <h2>What happens next?</h2>
             <p>
-              Share the problem, who it affects and what a useful outcome would
-              look like. For a project enquiry, include any timing or budget you
-              have in mind.
+              I’ll read your message and reply with any questions. If a paid
+              review is the right next step, I’ll explain what it covers and the
+              fee before you decide.
             </p>
             <p>
-              If it’s a content question, a link to the relevant article or
-              video helps me understand the context.
+              I’m currently working with UK businesses. A short description is
+              enough to start. Please leave out confidential documents and
+              customer data. You can also ask about something I’ve shared.
             </p>
           </div>
           <nav

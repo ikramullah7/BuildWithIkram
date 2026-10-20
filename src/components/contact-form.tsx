@@ -126,7 +126,8 @@ export function ContactForm({
     <div className="contact-form-panel">
       <h2 id="contact-form-title">Send a message</h2>
       <p className="contact-form-intro">
-        Tell me what you have in mind. I’ll use your email address to reply.
+        Tell me about the task you want to improve. I’ll use your email address
+        to reply.
       </p>
       {status === "success" ? (
         <div
